@@ -13,18 +13,31 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
         <link rel="stylesheet" href="../src/assets/css/style.css">
-    <title>Index</title>
+    <title>Register</title>
 </head>
 
 <body>
-    
-
-    <div class=" jumbotron">
-        <h1>hi</h1>
-    </div>
-
-
-
+    <section id="loginsect" class="w-100 h-100 bg-light d-flex justify-content-center align-items-center">
+        <div class="h-50 w-25 bg-white border-dark border rounded">
+            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                <form class="d-flex flex-column justify-content-center align-items-center w-50 mb-3" id="registerForm">
+                    <div class="form-group d-flex flex-column">
+                        <label>nombre de usuario</label>
+                        <input type="text" id="userRegisterInput">
+                    </div>
+                    <div class="form-group d-flex flex-column">
+                        <label>email</label>
+                        <input type="email" id="emailRegisterInput">
+                    </div>
+                    <div class="form-group d-flex flex-column">
+                        <label>contraseña</label>
+                        <input type="password" id="passwordRegisterInput">
+                    </div>
+                    <button type="submit" class="btn btn-outline-secondary align-self-end">crear cuenta</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
 
 
