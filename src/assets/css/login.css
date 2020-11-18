@@ -1,0 +1,35 @@
+body{
+    margin: 0%;
+    background:url(https://fotosde.eu/wp-content/uploads/2011/04/wallpaper.jpg) ;
+    background-size: cover;
+}
+.loginsect{
+    margin: 8% 12%;
+    width: 400px;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(22, 22, 24, 0.801);
+    border-radius: 12px;
+    color: rgb(223, 230, 227);
+}
+
+.loginssect{
+    padding: 4%;
+    margin: 8% 12%;
+    width: 400px;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(22, 22, 24, 0.801);
+    border-radius: 12px;
+    color: rgb(223, 230, 227);
+}
+
+.a{
+    display: flex;
+    justify-content: space-between;
+}

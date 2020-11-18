@@ -12,28 +12,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-        <link rel="stylesheet" href="../src/assets/css/style.css">
+    <link rel="stylesheet" href="../src/assets/css/login.css">
     <title>Register</title>
 </head>
 
 <body>
-    <section id="loginsect" class="w-100 h-100 bg-light d-flex justify-content-center align-items-center">
-        <div class="h-50 w-25 bg-white border-dark border rounded">
-            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-                <form class="d-flex flex-column justify-content-center align-items-center w-50 mb-3" id="registerForm">
+    <section id="loginsect">
+        <div class="loginssect">
+            <div>
+                <form id="registerForm">
                     <div class="form-group d-flex flex-column">
-                        <label>nombre de usuario</label>
-                        <input type="text" id="userRegisterInput">
+                        <label>Nombre de usuario</label>
+                        <input type="text" id="userRegisterInput" class="form-control w-100" placeholder="usuario">
                     </div>
                     <div class="form-group d-flex flex-column">
-                        <label>email</label>
-                        <input type="email" id="emailRegisterInput">
+                        <label>Email</label>
+                        <input type="email" id="emailRegisterInput" class="form-control w-100" placeholder="usuario">
                     </div>
                     <div class="form-group d-flex flex-column">
-                        <label>contraseña</label>
-                        <input type="password" id="passwordRegisterInput">
+                        <label>Contraseña</label>
+                        <input type="password" id="passwordRegisterInput" class="form-control w-100"
+                            placeholder="usuario">
                     </div>
-                    <button type="submit" class="btn btn-outline-secondary align-self-end">crear cuenta</button>
+                    <div class="a">
+                        <button type="submit" class="btn btn-outline-secondary align-self-end">crear cuenta</button>
+                        <span class="ml-3">
+                            <a href="./login.html">Volver a la anterior</a>
+                        </span>
+                    </div>
                 </form>
             </div>
         </div>
@@ -42,7 +48,7 @@
 
 
 
-    
+
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -50,8 +56,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-
-
+    <script src="./app/register.js"></script>
 </body>
 
 </html>
