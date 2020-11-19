@@ -33,3 +33,36 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 750px){
+    body{
+        margin: 0%;
+        background:url(https://i.pinimg.com/originals/c8/8d/8a/c88d8aa4fab3c9a24ddef58554975087.jpg);
+        background-size: cover;
+    }
+    .loginsect{
+        padding: 2%;
+        margin: 22% 4%;
+        width: 92%;
+        height:400px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(22, 22, 24, 0.801);
+        border-radius: 12px;
+        color: rgb(223, 230, 227);
+    }
+    
+    .loginssect{
+        padding: 6%;
+        margin: 22% 4%;
+        width: 92%;
+        height:400px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(22, 22, 24, 0.801);
+        border-radius: 12px;
+        color: rgb(223, 230, 227);
+    }
+}
