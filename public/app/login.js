@@ -2,6 +2,10 @@ const loginForm = document.getElementById('loginForm');
 const userLogin = document.getElementById('userLoginInput');
 const passwordLogin = document.getElementById('passwordLoginInput');
 
+if (JSON.parse(localStorage.getItem('sesion')) == 'falseSession') {
+} else {
+    window.location.href= ('./index.html')
+}
 
 loginForm.onsubmit = (e) =>{
     e.preventDefault();
@@ -17,7 +21,11 @@ loginForm.onsubmit = (e) =>{
     const ingresoObligatorio= usersRegister.find((usersRegister) => usersRegister.usuario === usuarioLG && usersRegister.password === passwordLG);
     
     if (ingresoObligatorio) {
+        console.log('higigi')
+
         window.location.href= ('./index.html')
+        const sessionJSON = JSON.stringify(ingresoObligatorio)
+        localStorage.setItem('sesion',sessionJSON)
     } else {
         alert('No pa no ingresaste intentalo otro dia')
     }
