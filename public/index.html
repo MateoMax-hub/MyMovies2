@@ -12,25 +12,387 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-        <link rel="stylesheet" href="../src/assets/css/style.css">
+    <link rel="stylesheet" href="../src/assets/css/style.css">
     <title>Index</title>
 </head>
 
 <body>
-    
 
-    <div class=" jumbotron d-flex justify-content-between">
-        <h1>hi</h1>
-        <button onclick="endSession()" type="button">cerrar sesion</button>
-    </div>
+    <!-- Section de Navbar -->
+
+    <section class="navInicio" id="navMen">
+        </head>
+        <nav class="navbar navbar-dark">
+            <a class="navbar-brand" id="titulo" href="#">
+                <h3>Mercado-Pelis</h3>
+            </a>
+            <div style="display: flex;">
+                <form class="form-inline my-2 my-md-0">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+                        aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </form>
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbarsExample01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Opcion 1 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administracion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Perfiles</a>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" onclick="endSession()" id="dropdown01" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Cerrar Seccion</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Section de carrucel y titulos -->
+
+    <section>
+        <div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-item active">
+                            <img src="https://images.hdqwalls.com/wallpapers/it-horror-movie-5k-3i.jpg" height="650px"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Titulo de Pelicula</h5>
+                                <p><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+                                    nihil qui quisquam magni esse, officia natus exercitationem voluptates odio dolor
+                                    rerum minima quam eos inventore molestiae praesentium? Odit, dolores inventore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item active">
+                            <img src="https://i.pinimg.com/originals/ee/e0/b5/eee0b5a6c9c3f9216d2c80c91701d9bc.jpg"
+                            height="650px" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Titulo de Pelicula</h5>
+                                <p><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+                                    nihil qui quisquam magni esse, officia natus exercitationem voluptates odio dolor
+                                    rerum minima quam eos inventore molestiae praesentium? Odit, dolores inventore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item active">
+                            <img src="https://i.pinimg.com/originals/c8/9f/13/c89f135f391170c34a8599024277be5d.jpg"
+                            height="650px" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Titulo de Pelicula</h5>
+                                <p><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+                                    nihil qui quisquam magni esse, officia natus exercitationem voluptates odio dolor
+                                    rerum minima quam eos inventore molestiae praesentium? Odit, dolores inventore.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section de tematicas de Peliculas -->
+
+    <section>
+        <div style="margin: 2%;" class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-outline-info dropdown-toggle"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Peliculas para Alquilar
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#">Accion</a>
+                    <a class="dropdown-item" href="#">Comedia</a>
+                    <a class="dropdown-item" href="#">Drama</a>
+                    <a class="dropdown-item" href="#">Romanticas</a>
+                    <a class="dropdown-item" href="#">Stand Up</a>
+                    <a class="dropdown-item" href="#">Terror</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section de card -->
+
+    <section>
+        <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div style="display: flex;">
+            <div style="margin: 2%;" class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-info "
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">Accion</a>
+                        <a class="dropdown-item" href="#">Comedia</a>
+                        <a class="dropdown-item" href="#">Drama</a>
+                        <a class="dropdown-item" href="#">Romanticas</a>
+                        <a class="dropdown-item" href="#">Stand Up</a>
+                        <a class="dropdown-item" href="#">Terror</a>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; width: 15%; margin: 2% 0%;">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                  </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+    <!-- Section de card -->
+
+    <section>
+        <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section>
+        <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo de Pelicula</h5>
+                    <p class="card-text"><b>Descripcion:</b> Some quick example text to build on the card title and make
+                        up the bulk of the
+                        card's content.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="#" class="btn btn-dark">Alquilar</a>
+                        <a href="#" class="btn btn-success">Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-
-
-
-
-    
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
