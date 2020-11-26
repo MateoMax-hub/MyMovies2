@@ -117,48 +117,18 @@
     <!-- Section de carrucel y titulos -->
 
     <section>
-        <div>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="carousel-item active">
-                            <!-- <img src="https://images.hdqwalls.com/wallpapers/it-horror-movie-5k-3i.jpg" height="650px"
-                                class="d-block w-100" alt="..."> -->
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Titulo de Pelicula</h5>
-                                <p><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
-                                    nihil qui quisquam magni esse, officia natus exercitationem voluptates odio dolor
-                                    rerum minima quam eos inventore molestiae praesentium? Odit, dolores inventore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-item active">
-                            <!-- <img src="https://i.pinimg.com/originals/ee/e0/b5/eee0b5a6c9c3f9216d2c80c91701d9bc.jpg"
-                                height="650px" class="d-block w-100" alt="..."> -->
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Titulo de Pelicula</h5>
-                                <p><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
-                                    nihil qui quisquam magni esse, officia natus exercitationem voluptates odio dolor
-                                    rerum minima quam eos inventore molestiae praesentium? Odit, dolores inventore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-item active">
-                            <!-- <img src="https://i.pinimg.com/originals/c8/9f/13/c89f135f391170c34a8599024277be5d.jpg"
-                                height="650px" class="d-block w-100" alt="..."> -->
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Titulo de Pelicula</h5>
-                                <p><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
-                                    nihil qui quisquam magni esse, officia natus exercitationem voluptates odio dolor
-                                    rerum minima quam eos inventore molestiae praesentium? Odit, dolores inventore.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="./img/it.jps.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/deadpool.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/avengers.jpg" class="d-block w-100" alt="...">
             </div>
-        </div>
+          </div>
     </section>
 
     <!-- Section de tematicas de Peliculas -->
@@ -171,12 +141,24 @@
                     Peliculas para Alquilar
                 </button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dropdown-item" href="#">Accion</a>
-                    <a class="dropdown-item" href="#">Comedia</a>
-                    <a class="dropdown-item" href="#">Drama</a>
-                    <a class="dropdown-item" href="#">Romanticas</a>
-                    <a class="dropdown-item" href="#">Stand Up</a>
-                    <a class="dropdown-item" href="#">Terror</a>
+                    <li>
+                        <a class="dropdown-item" href="#accion">Accion</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#comedia">Comedia</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#drama">Drama</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Romanticas</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Stand Up</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Terror</a>
+                    </li>
                 </div>
             </div>
         </div>
@@ -206,12 +188,24 @@
                         </svg>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item" href="#">Accion</a>
-                        <a class="dropdown-item" href="#">Comedia</a>
-                        <a class="dropdown-item" href="#">Drama</a>
-                        <a class="dropdown-item" href="#">Romanticas</a>
-                        <a class="dropdown-item" href="#">Stand Up</a>
-                        <a class="dropdown-item" href="#">Terror</a>
+                        <li>
+                            <a class="dropdown-item" href="#accion">Accion</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#comedia">Comedia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#drama">Drama</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Romanticas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Stand Up</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Terror</a>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -235,23 +229,23 @@
     <br>
 
     <!-- fila de peliculas uno 😎-->
-    <section>
+    <section id="comedia">
         <div>
             <h4 class="titularDeFila">Comedia</h4>
         </div>
-        <div id="subirCard" style="display: flex; justify-content: space-around;">
-            <div>
+        <div id="subirCardd">
+            <div id="subirCard">
                 <div>
                     <!-- Button trigger modal -->
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal11">
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
                             <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
                                 class="card-img-top" alt="...">
                         </button>
                     </div>
-
+    
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class=" modal-dialog">
                             <div class="modal-content">
@@ -270,118 +264,177 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal22">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit.</p>
+    
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal33">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal33">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit.</p>
+            <div id="subirCard">
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal33">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal44">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
-                                    elit.</p>
-                            </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
         </div>
     </section>
 
     <br>
     <!-- fila de peliculas Dos 😎-->
-
-    <section>
+    <section id="drama">
         <div>
             <h4 class="titularDeFila">Drama</h4>
         </div>
-        <div id="subirCard" style="display: flex; justify-content: space-around;">
-            <div>
+        <div id="subirCardd">
+            <div id="subirCard">
                 <div>
                     <!-- Button trigger modal -->
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal1">
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
                             <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
                                 class="card-img-top" alt="...">
                         </button>
                     </div>
-
+    
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class=" modal-dialog">
                             <div class="modal-content">
@@ -400,117 +453,206 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal2">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit.</p>
+    
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal33">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal3">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit.</p>
+            <div id="subirCard">
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal33">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal4">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
-                                    elit.</p>
-                            </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
         </div>
     </section>
     <br>
     <!-- fila de peliculas Tres 😎-->
-
-    <section>
+    <section id="accion">
         <div>
-            <h4 class="titularDeFila">Terror</h4>
+            <h4 class="titularDeFila">Accion</h4>
         </div>
-        <div id="subirCard" style="display: flex; justify-content: space-around;">
-            <div>
+        <div id="subirCardd">
+            <div id="subirCard">
                 <div>
                     <!-- Button trigger modal -->
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal1">
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
                             <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
                                 class="card-img-top" alt="...">
                         </button>
                     </div>
-
+    
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal33">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class=" modal-dialog">
                             <div class="modal-content">
@@ -529,97 +671,128 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal2">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit.</p>
-                            </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal3">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit.</p>
+            <div id="subirCard">
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal33">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Button trigger modal -->
+                    <div class="CardsIndividuales m-1">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
+                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                                class="card-img-top" alt="...">
+                        </button>
+                    </div>
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class=" modal-dialog">
+                            <div class="modal-content">
+                                <div class="CardsModal card-body">
+                                    <h5 class="card-title">Titulo de pelicula</h5>
+                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
+                                        elit.</p>
+                                </div>
+                                <div class="CardsModal modal-body">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <!-- Button trigger modal -->
-                <div class="CardsIndividuales">
-                    <button type="button" data-toggle="modal" data-target="#exampleModal4">
-                        <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                            class="card-img-top" alt="...">
-                    </button>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <h5 class="card-title">Titulo de pelicula</h5>
-                                <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
-                                    elit.</p>
-                            </div>
-                            <div class="CardsModal modal-body">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <a href="#" class="btn btn-success">Alquilar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
         </div>
     </section>
+    <br>
 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -631,9 +804,6 @@
         crossorigin="anonymous"></script>
     <script src="./app/agregar.js"></script>
     <script src="./app/endSession.js"></script>
-
-
-
 </body>
 
 </html>

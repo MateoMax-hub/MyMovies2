@@ -26,6 +26,16 @@ html, body {
     background-color: #262727;
     color: white;
 }
+.carousel-caption{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.carouselT{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 .modal{
     margin: 10% 0px;
 }
@@ -40,8 +50,15 @@ html, body {
     margin: 2% 0%;
 }
 .CardsIndividuales{
-    margin: 6%;
-    width: 15rem;
+    margin: 0%;
+    width: 182px;
+}
+#subirCard{
+    display: flex; 
+}
+#subirCardd{
+    display: flex; 
+    justify-content: center;
 }
 
 @media screen and (max-width: 750px){
@@ -51,18 +68,32 @@ html, body {
     .navInicio{
         width: 100%;
     }
+    #search{
+        display: flex; 
+        width: 35px; 
+        margin: 2% 0%;
+    }
     #searchh{
         width: 60%;
         margin: 2%;
     }
     #subirCard{
-        margin: 0% 4%;
+        margin: 0% 2%;
         display: flex;
-        /* flex-direction: column; */
+        justify-content: center;
+    }
+    #subirCardd{
+        display: flex; 
+        flex-direction: column;
     }
     .CardsIndividuales{
-        margin: 6%;
-        width: 8rem;
+        margin: 2%;
+        width: 100px;
+    }
+    .modal-dialog{
+        padding: 20px;
+        margin: 29% 0%;
+        width: 100%;
     }
     .Cards{
         display: flex;
@@ -74,13 +105,5 @@ html, body {
         color: white;
         margin: 0px 5%;
         font-size: 20px;
-    }
-    #search{
-        display: flex; 
-        width: 35px; 
-        margin: 2% 0%;
-    }
-    .modal{
-       width: 82%;
     }
 }
