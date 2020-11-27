@@ -46,12 +46,12 @@ function displayUser() {
     for (let i = 0; i < userUI.length; i++) {
         const agregar = userUI[i];
         const tr =
-        `<div style="margin: 0px 3%;">
+        `<div class="prueba">
                     <!-- Button trigger modal -->
                     <div class="CardsIndividuales">
                         <a type="button" data-toggle="modal" data-target="#exampleModal1">
                             <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
-                                class="card-img-top" alt="...">
+                            class="card-img-top" alt="...">
                         </a>
                     </div>
     
