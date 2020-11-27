@@ -50,8 +50,8 @@ html, body {
     margin: 2% 0%;
 }
 .CardsIndividuales{
-    margin: 0%;
-    width: 182px;
+    margin: 1%;
+    width: 210px;
 }
 #subirCard{
     display: flex; 
@@ -78,7 +78,7 @@ html, body {
         margin: 2%;
     }
     #subirCard{
-        margin: 0% 2%;
+        margin: 0%;
         display: flex;
         justify-content: center;
     }
@@ -87,8 +87,8 @@ html, body {
         flex-direction: column;
     }
     .CardsIndividuales{
-        margin: 2%;
-        width: 100px;
+        margin: 0%;
+        width: 125px;
     }
     .modal-dialog{
         padding: 20px;

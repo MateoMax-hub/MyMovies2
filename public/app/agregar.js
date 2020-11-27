@@ -33,6 +33,7 @@ formularioAgregar.onsubmit= (e) =>{
 
     formularioAgregar.reset();
     displayUser()
+    displayUserDate()
     // $('#exampleModalLabel').modal('hide');
 }
 
@@ -48,11 +49,6 @@ function displayUser() {
         `<div style="margin: 0px 3%;">
                     <!-- Button trigger modal -->
                     <div class="CardsIndividuales">
-                        <div class="card" style="margin: 0%;">
-                            <button type="button" onclick="deleteUser('${agregar.id}')" class="close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
                         <a type="button" data-toggle="modal" data-target="#exampleModal1">
                             <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
                                 class="card-img-top" alt="...">
@@ -134,40 +130,43 @@ function displayUser() {
 }
 displayUser()
 
+
+// Agregar en Dom osea Html las nuevas Cards
+
 // data-toggle="modal" data-target="#exampleModalOneDireccion"
 
 
-const loadForm = (userId) =>{
-    const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
-    const user = userUI.find((userUI)=> userUI.id === userId)
+// const loadForm = (userId) =>{
+//     const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
+//     const user = userUI.find((userUI)=> userUI.id === userId)
 
-    TituloTwo.value = user.titulo;
-    DescripcionTwo.value = user.descripcion;
-    editUserId = userId;
-}
+//     TituloTwo.value = user.titulo;
+//     DescripcionTwo.value = user.descripcion;
+//     editUserId = userId;
+// }
 
-FormCambioPeli.onsubmit= (e) =>{
-    e.preventDefault()
-    const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
-    const titulo= TituloTwo.value;
-    const descripcion= DescripcionTwo.value;
-    const updatedUsers = userUI.map((u) => {
-        if (u.id === editUserId) {
-            const user = {
-                ...u,
-                titulo: titulo,
-                descripcion: descripcion,
-            }
-            return user;
-        } else {
-            return u;
-        }
-    });
-    const userAgregarJson = JSON.stringify(updatedUsers);
-    localStorage.setItem('userUI', userAgregarJson);
-    FormCambioPeli.reset();
-    displayUser();
-}
+// FormCambioPeli.onsubmit= (e) =>{
+//     e.preventDefault()
+//     const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
+//     const titulo= TituloTwo.value;
+//     const descripcion= DescripcionTwo.value;
+//     const updatedUsers = userUI.map((u) => {
+//         if (u.id === editUserId) {
+//             const user = {
+//                 ...u,
+//                 titulo: titulo,
+//                 descripcion: descripcion,
+//             }
+//             return user;
+//         } else {
+//             return u;
+//         }
+//     });
+//     const userAgregarJson = JSON.stringify(updatedUsers);
+//     localStorage.setItem('userUI', userAgregarJson);
+//     FormCambioPeli.reset();
+//     displayUser();
+// }
 
 // Eliminar Card
 
