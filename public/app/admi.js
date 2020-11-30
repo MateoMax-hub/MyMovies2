@@ -9,6 +9,7 @@ function displayUsersDate(){
         `
         <tr>
             <td>${user.titulo}</td>
+            <td>$${user.precio}</td>
             <td>the Bird</td>
             <td>
                 <button class="btn btn-dark" type="button" onclick="deleteUser('${user.id}')">

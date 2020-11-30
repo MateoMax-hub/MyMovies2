@@ -45,7 +45,7 @@ html, body {
     transition-delay: 0s, 0s;
 }
 .CardsIndividuales:hover{
-    transform: scale(1.2);
+    transform: scale(1.6);
 	transform-origin: center;
 }
 #subirCard{

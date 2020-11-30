@@ -2,6 +2,8 @@
 const formularioAgregar= document.getElementById('AgregarPeli');
 const Titulo= document.getElementById('TituloPeli');
 const Descripcion= document.getElementById('DescripcionPeli');
+const Precio= document.getElementById('PrecioPeli');
+const Imagen= document.getElementById('ImagenPeli');
 const subirCard= document.getElementById('subirCard');
 
 // Cambios de Agregar Pelicula
@@ -21,10 +23,14 @@ formularioAgregar.onsubmit= (e) =>{
     const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
     const titulo= Titulo.value;
     const descripcion= Descripcion.value;
+    const precio= Precio.value;
+    const imagen= Imagen.value;
 
     userUI.push({
         titulo: titulo,
         descripcion: descripcion,
+        precio: precio,
+        imagen: imagen,
         id: generateId()
     })
 
@@ -49,14 +55,14 @@ function displayUser() {
         `<div class="prueba">
                     <!-- Button trigger modal -->
                     <div class="CardsIndividuales">
-                        <a type="button" data-toggle="modal" data-target="#exampleModal1">
-                            <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                        <a type="button" data-toggle="modal" data-target="#exampleModal${[i]}">
+                            <img src="${agregar.imagen}"
                             class="card-img-top" alt="...">
                         </a>
                     </div>
     
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="exampleModal${[i]}" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class=" modal-dialog">
                             <div class="modal-content">
@@ -67,6 +73,8 @@ function displayUser() {
                                     <h5 class="card-title">${agregar.titulo}</h5>
                                     <br>
                                     <p class="card-text"><b>Descripcion:</b>${agregar.descripcion}</p>
+                                    <br>
+                                    <p class="card-text"><b>Precio:</b>${agregar.precio}</p>
                                 </div>
                                 <div class="CardsModal modal-body">
                                     <div style="display: flex; justify-content: space-between;">
