@@ -26,16 +26,17 @@ html, body {
     font-family: serif;
     font-size: 18px;
 }
-#search{
-    margin: 4%;
-    display: flex; 
-    width: 80%%; 
-    
+.ConsultasBusqueda{
+    display: flex;
+    justify-content: space-between;
 }
-#searchh{
+#search{
+    margin: 0px 5%;
     display: flex; 
-    width: 100%;
-    margin: 2% 0%;
+}
+.btn-group{
+    margin: 0% 2%;
+    width: 150px; 
 }
 .CardsIndividuales{
     margin: 1%;
@@ -70,12 +71,7 @@ html, body {
     }
     #search{
         display: flex; 
-        width: 35px; 
-        margin: 2% 0%;
-    }
-    #searchh{
-        width: 60%;
-        margin: 2%;
+        margin: 0px 3%;
     }
     #subirCard{
         margin: 0%;
@@ -86,13 +82,16 @@ html, body {
         display: flex; 
         flex-direction: column;
     }
+    .ConsultasBusqueda{
+        margin: 6% 0px;
+    }
     .CardsIndividuales{
         margin: 0%;
         width: 125px;
     }
     .modal-dialog{
         padding: 20px;
-        margin: 29% 0%;
+        margin: 0%;
         width: 100%;
     }
     .Cards{

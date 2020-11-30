@@ -5,6 +5,13 @@ body{
     background-color: black;
 }
 .fondodos{
-    margin: 0% 2%;
-    padding: 4%;
+    margin: 0%;
+    padding: 2% 4%;
+}
+
+@media (max-width: 780px){
+    .fondodos{
+        margin: 0%;
+        padding: 0%;
+    }
 }

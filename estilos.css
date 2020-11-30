@@ -52,7 +52,7 @@ header nav a.activo {
 	font-size: 16px;
 	min-height: 40.62em;
 	color: #fff;
-	background: url(./public/img/it.jps.jpg);
+	background: url(https://i.pinimg.com/originals/76/96/bf/7696bfda5c379cce635c58842a640efa.jpg);
 	background-position: center center;
 	background-size: cover;
 	margin-bottom: 3.12em;
@@ -198,11 +198,18 @@ header nav a.activo {
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
 @media screen and (max-width: 800px) {
+	.pelicula-principal{
+		background: url(https://i.pinimg.com/736x/f5/e1/1a/f5e11a1d5815d187067a89f120f11a15.jpg);
+		background-position: center center;
+		background-size: cover;
+	}
 	header .logotipo {
 		margin-bottom: 10px;
 		font-size: 30px;
 	}
-
+	.contenedor{
+		font-size: 18px;
+	}
 	header .contenedor {
 		flex-direction: column;
 		text-align: center;
