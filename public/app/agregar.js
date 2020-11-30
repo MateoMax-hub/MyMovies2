@@ -66,14 +66,14 @@ function displayUser() {
             `<div class="prueba">
                     <!-- Button trigger modal -->
                     <div class="CardsIndividuales">
-                        <a type="button" data-toggle="modal" data-target="#exampleModal${[i]}">
+                        <a type="button" data-toggle="modal" data-target="#${agregar.id}">
                             <img src="${agregar.imagen}"
                             class="card-img-top" alt="...">
                         </a>
                     </div>
     
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal${[i]}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class=" modal-dialog">
                             <div class="modal-content">
@@ -151,14 +151,14 @@ function displayUser() {
             `<div class="prueba">
                     <!-- Button trigger modal -->
                     <div class="CardsIndividuales">
-                        <a type="button" data-toggle="modal" data-target="#exampleModal${[i]}">
+                        <a type="button" data-toggle="modal" data-target="#${agregar.id}">
                             <img src="${agregar.imagen}"
                             class="card-img-top" alt="...">
                         </a>
                     </div>
     
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal${[i]}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class=" modal-dialog">
                             <div class="modal-content">
