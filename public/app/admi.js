@@ -10,7 +10,7 @@ function displayUsersDate(){
         <tr>
             <td>${user.titulo}</td>
             <td>$${user.precio}</td>
-            <td>the Bird</td>
+            <td>${user.categoria}</td>
             <td>
                 <button class="btn btn-dark" type="button" onclick="deleteUser('${user.id}')">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

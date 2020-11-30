@@ -1,15 +1,22 @@
 // Agregar Pelicula
-const formularioAgregar= document.getElementById('AgregarPeli');
-const Titulo= document.getElementById('TituloPeli');
-const Descripcion= document.getElementById('DescripcionPeli');
-const Precio= document.getElementById('PrecioPeli');
-const Imagen= document.getElementById('ImagenPeli');
-const subirCard= document.getElementById('subirCard');
+const formularioAgregar = document.getElementById('AgregarPeli');
+const Titulo = document.getElementById('TituloPeli');
+const Descripcion = document.getElementById('DescripcionPeli');
+const Precio = document.getElementById('PrecioPeli');
+const Imagen = document.getElementById('ImagenPeli');
+const Categoria = document.getElementById('categoriaPeli');
+
+
+//Categorias
+const subirCard = document.getElementById('subirCard');
+const TerrorUI = document.getElementById('Terror');
+const DramaUI = document.getElementById('Drama');
+const comediaUI = document.getElementById('Comedia');
 
 // Cambios de Agregar Pelicula
-const FormCambioPeli= document.getElementById('CambiarPeli');
-const TituloTwo= document.getElementById('TituloPeliTwo');
-const DescripcionTwo= document.getElementById('DescripcionPeliTwo');
+const FormCambioPeli = document.getElementById('CambiarPeli');
+const TituloTwo = document.getElementById('TituloPeliTwo');
+const DescripcionTwo = document.getElementById('DescripcionPeliTwo');
 let editUserId = '';
 
 const generateId = function () {
@@ -18,19 +25,21 @@ const generateId = function () {
 
 // Json de Primer ingreso de Datos para agregar pelicula
 
-formularioAgregar.onsubmit= (e) =>{
+formularioAgregar.onsubmit = (e) => {
     e.preventDefault();
-    const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
-    const titulo= Titulo.value;
-    const descripcion= Descripcion.value;
-    const precio= Precio.value;
-    const imagen= Imagen.value;
+    const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
+    const titulo = Titulo.value;
+    const descripcion = Descripcion.value;
+    const precio = Precio.value;
+    const imagen = Imagen.value;
+    const categoria = Categoria.value;
 
     userUI.push({
         titulo: titulo,
         descripcion: descripcion,
         precio: precio,
         imagen: imagen,
+        categoria: categoria,
         id: generateId()
     })
 
@@ -52,7 +61,7 @@ function displayUser() {
     for (let i = 0; i < userUI.length; i++) {
         const agregar = userUI[i];
         const tr =
-        `<div class="prueba">
+            `<div class="prueba">
                     <!-- Button trigger modal -->
                     <div class="CardsIndividuales">
                         <a type="button" data-toggle="modal" data-target="#exampleModal${[i]}">
@@ -72,17 +81,15 @@ function displayUser() {
                                     </button>
                                     <h5 class="card-title">${agregar.titulo}</h5>
                                     <br>
-                                    <p class="card-text"><b>Descripcion:</b>${agregar.descripcion}</p>
+                                    <img src="${agregar.imagen}"class="card-img-top" alt="...">
                                     <br>
-                                    <p class="card-text"><b>Precio:</b>${agregar.precio}</p>
+                                    <br>
+                                    <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
+                                    <p class="card-text"><b>Precio: </b>$${agregar.precio}</p>
                                 </div>
                                 <div class="CardsModal modal-body">
                                     <div style="display: flex; justify-content: space-between;">
-                                        <!-- Button trigger modal -->
-                    
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalUi">
-                                         Cambiar 
-                                        </button>    
+                                        <!-- Button trigger modal -->  
                                         <a href="#" class="btn btn-success">Alquilar</a>
                                     </div>
                                 </div>
@@ -134,6 +141,16 @@ function displayUser() {
 
         row.push(tr);
     }
+    // if (userUI.filter((agregar) => agregar.categoria === 'Comedia')) {
+    //     comediaUI.innerHTML = row.join('');
+    // } if (userUI.filter((agregar) => agregar.categoria === 'Terror')) {
+    //     TerrorUI.innerHTML = row.join('');
+    // } if (userUI.filter((agregar) => agregar.categoria === 'Drama')) {
+    //     DramaUI.innerHTML = row.join('');
+    // } else {
+    //     subirCard.innerHTML = row.join('');
+    // }
+
     subirCard.innerHTML = row.join('');
 }
 displayUser()
