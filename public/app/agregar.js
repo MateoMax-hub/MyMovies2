@@ -13,12 +13,6 @@ const TerrorUI = document.getElementById('Terror');
 const DramaUI = document.getElementById('Drama');
 const comediaUI = document.getElementById('Comedia');
 
-// Cambios de Agregar Pelicula
-const FormCambioPeli = document.getElementById('CambiarPeli');
-const TituloTwo = document.getElementById('TituloPeliTwo');
-const DescripcionTwo = document.getElementById('DescripcionPeliTwo');
-let editUserId = '';
-
 const generateId = function () {
     return '_' + Math.random().toString(36).substr(2, 9);
 };
@@ -156,42 +150,8 @@ function displayUser() {
 displayUser()
 
 
-// Agregar en Dom osea Html las nuevas Cards
-
 // data-toggle="modal" data-target="#exampleModalOneDireccion"
 
-
-// const loadForm = (userId) =>{
-//     const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
-//     const user = userUI.find((userUI)=> userUI.id === userId)
-
-//     TituloTwo.value = user.titulo;
-//     DescripcionTwo.value = user.descripcion;
-//     editUserId = userId;
-// }
-
-// FormCambioPeli.onsubmit= (e) =>{
-//     e.preventDefault()
-//     const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
-//     const titulo= TituloTwo.value;
-//     const descripcion= DescripcionTwo.value;
-//     const updatedUsers = userUI.map((u) => {
-//         if (u.id === editUserId) {
-//             const user = {
-//                 ...u,
-//                 titulo: titulo,
-//                 descripcion: descripcion,
-//             }
-//             return user;
-//         } else {
-//             return u;
-//         }
-//     });
-//     const userAgregarJson = JSON.stringify(updatedUsers);
-//     localStorage.setItem('userUI', userAgregarJson);
-//     FormCambioPeli.reset();
-//     displayUser();
-// }
 
 // Eliminar Card
 
