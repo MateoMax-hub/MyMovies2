@@ -1,21 +1,19 @@
-const formularioAgregar= document.getElementById('AgregarPeli');
-const Titulo= document.getElementById('TituloPeli');
-const Descripcion= document.getElementById('DescripcionPeli');
 
-
-const generateId = function () {
-    return '_' + Math.random().toString(36).substr(2, 9);
-};
-
-formularioAgregar.onsubmit= (e) =>{
+formularioAgregar.onsubmit = (e) => {
     e.preventDefault();
-    const userUI= JSON.parse(localStorage.getItem('userUI')) || [];
-    const titulo= Titulo.value;
-    const descripcion= Descripcion.value;
+    const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
+    const titulo = Titulo.value;
+    const descripcion = Descripcion.value;
+    const precio = Precio.value;
+    const imagen = Imagen.value;
+    const categoria = Categoria.value;
 
     userUI.push({
         titulo: titulo,
         descripcion: descripcion,
+        precio: precio,
+        imagen: imagen,
+        categoria: categoria,
         id: generateId()
     })
 
@@ -24,5 +22,6 @@ formularioAgregar.onsubmit= (e) =>{
 
     formularioAgregar.reset();
     displayUser()
+    displayUserDate()
     // $('#exampleModalLabel').modal('hide');
 }
