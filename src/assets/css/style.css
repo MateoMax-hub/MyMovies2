@@ -65,6 +65,7 @@ html, body {
 @media screen and (max-width: 750px){
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
+
     }
     .navInicio{
         width: 100%;
