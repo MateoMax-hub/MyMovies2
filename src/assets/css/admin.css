@@ -1,0 +1,12 @@
+.bg-my-light {
+    background-color: rgb(243, 243, 243);
+}
+.my-border {
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+}
+.sidebar-text {
+    font-size: 22px;
+    color: black;
+}
