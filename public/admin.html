@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-        <link rel="stylesheet" href="../src/assets/css/admin.css">
+    <link rel="stylesheet" href="../src/assets/css/admin.css">
     <title>admin</title>
 </head>
 
-<body>
+<body onresize="sidebarHeight()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -33,11 +33,37 @@
     </nav>
 
     <main class="d-flex" id="sidebar">
-        <div class="w-25 bg-light h-100">
-
+        <div class="w-25 bg-my-light my-border h-100">
+            <ul class=" mt-5 ml-5">
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">Agregar Película</a>
+                </li>
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                </li>
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                </li>
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                </li>
+            </ul>
         </div>
         <div class="w-75 h-100">
-
+            <form id="AgregarPeli">
+                <input id="TituloPeli" type="text" placeholder="titulo" required>
+                <textarea id="DescripcionPeli" cols="30" rows="10" placeholder="descripcion" required></textarea>
+                <input id="PrecioPeli" type="number" placeholder="precio" required>
+                <input id="ImagenPeli" type="text" placeholder="url de imagen para pelicula" required>
+                <select id="categoriaPeli" required>
+                    <option value="" disabled selected>Categorias</option>
+                    <option>Nuevos Agregados</option>
+                    <option>Comedia</option>
+                    <option>Drama</option>
+                    <option>Terror</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
         </div>
     </main>
     
@@ -48,16 +74,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-        <script type="text/javascript">
-
-            $(document).ready(function () {
-
-                var height = $(window).height() - 55.97;
-                
-                $('#sidebar').height(height);
-            });
-
-        </script>
+    <script src="./app/sidebarHeight.js"></script>
+    <script src="./app/agregarAdmin.js"></script>
 </body>
 
 </html>
