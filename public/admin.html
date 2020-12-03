@@ -1,187 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="../src/assets/css/admin.css">
-    <link rel="stylesheet" href="../estilos.css">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <header>
-        <div class="contenedor">
-            <h2 class="logotipo" style="font-family: fantasy;" >Mercado-Pelis</h2>
-            <nav>
-                <a href="./index.html" class="activo">Inicio</a>
-                <!-- Button trigger modal -->
-                <a type="submit" data-toggle="modal" data-target="#exampleModal"> Agregar Peliculas</a>
-                <a href="#">Películas</a>
-                <a onclick="endSession()" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cerrar Sesion</a>
-                <a href="#">Mi lista</a>
-            </nav>
+    <title>admin</title>
+</head>
+
+<body onresize="sidebarHeight()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-    </header>
-    <main>
-        <div class="fondo">
-            <div class="fondodos">
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Categorias</th>
-                        <th scope="col">Opciones</th>
-                      </tr>
-                    </thead>
-                    <tbody id="datosUI">
-                    </tbody>
-                </table>
+    </nav>
+
+    <main class="d-flex" id="sidebar">
+        <div class="w-25 bg-my-light my-border h-100">
+            <ul class=" mt-5 ml-5">
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="showagregarPeliculaSect()" class="sidebar-text">Agregar Película</a>
+                </li>
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                </li>
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                </li>
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-75 h-100 d-none" id="agregarPeliculaSect">
+            <div class=" d-flex flex-column align-items-center sidebar-text">
+                <h3 class="my-5">Agrega Película</h3>
+                <form id="AgregarPeli" class="d-flex flex-column w-100 ">
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Titulo de la pelicula</label>
+                        <input id="TituloPeli" type="text" required class="w-50">   
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Descripcion de la pelicula</label>
+                        <textarea id="DescripcionPeli" cols="30" rows="10" required class="w-50"></textarea>
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Precio de la pelicula</label>
+                        <input id="PrecioPeli" type="number" required   class="w-50">
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Imagen para la card de la pelicula</label>
+                        <input id="ImagenPeli" type="text" required class="w-50">
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <select id="categoriaPeli" required>
+                            <option value="" disabled selected>Categorias</option>
+                            <option>Nuevos Agregados</option>
+                            <option>Comedia</option>
+                            <option>Drama</option>
+                            <option>Terror</option>
+                        </select>
+                    </div>
+                    <div class="form-group d-flex flex-column align-items-center">
+                        <button type="submit" class="btn btn-outline-success w-25">Agregar</button>
+                    </div>
+                </form>
             </div>
+        </div>
+        <div class="w-75 h-100 d-none">
+
         </div>
     </main>
-
-    <!-- Modal de agregar pelicula -->
-
-    <section>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Agregar Pelicula</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body">
-                            <form id="AgregarPeli">
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div style="display: flex;">
-                                        <input type="text" id="TituloPeli" class="form-control w-100"
-                                            aria-label="Text input with checkbox" placeholder="Titulo">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div style="display: flex;">
-                                        <input type="text" id="DescripcionPeli" class="form-control w-100"
-                                            aria-label="Text input with checkbox"
-                                            placeholder="Descripcion de pelicula...">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">$</span>
-                                        </div>
-                                        <input type="number" class="form-control" id="PrecioPeli" placeholder="Precio" required
-                                            maxlength="20">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="ImagenPeli"
-                                            placeholder="Ingrese el link de la imagen" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="division">División</label>
-                                    <select class="form-control" id="categoriaPeli" required>
-                                        <option value="" disabled selected>Categorias</option>
-                                        <option>Nuevos Agregados</option>
-                                        <option>Comedia</option>
-                                        <option>Drama</option>
-                                        <option>Terror</option>
-                                    </select>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- //Seccion donde se guardaran los codigos del cambio -->
-
-
-    <section>
-        
-  
-        <!-- Modal -->
-        <div class="modal fade" id="cambios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cambiar Datos</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-body">
-                        <div class="modal-body">
-                            <form id="AgregarCambio">
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div style="display: flex;">
-                                        <input type="text" id="TituloCambio" class="form-control w-100"
-                                            aria-label="Text input with checkbox" placeholder="Titulo">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div style="display: flex;">
-                                        <input type="text" id="DescripcionCambio" class="form-control w-100"
-                                            aria-label="Text input with checkbox"
-                                            placeholder="Descripcion de pelicula...">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">$</span>
-                                        </div>
-                                        <input type="number" class="form-control" id="PrecioCambio" placeholder="Precio" required
-                                            maxlength="20">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="input-group" style="display: flex; flex-direction: column;">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="ImagenCambio"
-                                            placeholder="Ingrese el link de la imagen" required>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-danger">Guardar</button>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-
-
+    
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="./app/agregar.js"></script>
-    <script src="./app/admi.js"></script>
-    <script src="./app/endSession.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="./app/sidebar.js"></script>
+    <script src="./app/nuevasPeliculas.js"></script>
+</body>
+
 </html>

@@ -1,50 +1,20 @@
-// Agregar Pelicula
-const formularioAgregar = document.getElementById('AgregarPeli');
-const Titulo = document.getElementById('TituloPeli');
-const Descripcion = document.getElementById('DescripcionPeli');
-const Precio = document.getElementById('PrecioPeli');
-const Imagen = document.getElementById('ImagenPeli');
-const Categoria = document.getElementById('categoriaPeli');
 
 
 //Categorias
-const subirCard = document.getElementById('subirCard');
+const subirCard = document.getElementById("subirCard");
+console.log(subirCard)
+console.log(document.getElementById('subirCard'))
 const TerrorUI = document.getElementById('Terror');
 const DramaUI = document.getElementById('Drama');
 const comediaUI = document.getElementById('Comedia');
 
-const generateId = function () {
-    return '_' + Math.random().toString(36).substr(2, 9);
-};
+// Cambios de Agregar Pelicula
+const FormCambioPeli = document.getElementById('CambiarPeli');
+const TituloTwo = document.getElementById('TituloPeliTwo');
+const DescripcionTwo = document.getElementById('DescripcionPeliTwo');
+let editUserId = '';
 
-// Json de Primer ingreso de Datos para agregar pelicula
-
-formularioAgregar.onsubmit = (e) => {
-    e.preventDefault();
-    const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
-    const titulo = Titulo.value;
-    const descripcion = Descripcion.value;
-    const precio = Precio.value;
-    const imagen = Imagen.value;
-    const categoria = Categoria.value;
-
-    userUI.push({
-        titulo: titulo,
-        descripcion: descripcion,
-        precio: precio,
-        imagen: imagen,
-        categoria: categoria,
-        id: generateId()
-    })
-
-    const userAgregarJson = JSON.stringify(userUI);
-    localStorage.setItem('userUI', userAgregarJson);
-
-    formularioAgregar.reset();
-    displayUser()
-    displayUserDate()
-    // $('#exampleModalLabel').modal('hide');
-}
+// Agregar en Dom osea Html las nuevas Cards
 
 // Agregar en Dom osea Html las nuevas Cards
 
@@ -411,7 +381,4 @@ displayUser()
 function deleteUser(userUIid) {
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
     const filteredUsers = userUI.filter((agregar) => agregar.id !== userUIid);
-    const userAgregarJson = JSON.stringify(filteredUsers);
-    localStorage.setItem('userUI', userAgregarJson);
-    displayUser()
 }

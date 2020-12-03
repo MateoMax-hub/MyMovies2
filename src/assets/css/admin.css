@@ -1,17 +1,12 @@
-body{
-    background-color: black;
+.bg-my-light {
+    background-color: rgb(243, 243, 243);
 }
-.fondo{
-    background-color: black;
+.my-border {
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
 }
-.fondodos{
-    margin: 0%;
-    padding: 2% 4%;
-}
-
-@media (max-width: 780px){
-    .fondodos{
-        margin: 0%;
-        padding: 0%;
-    }
+.sidebar-text {
+    font-size: 22px;
+    color: black;
 }
