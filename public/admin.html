@@ -36,7 +36,7 @@
         <div class="w-25 bg-my-light my-border h-100">
             <ul class=" mt-5 ml-5">
                 <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="hola()" class="sidebar-text">Agregar Película</a>
+                    <a href="#" onclick="showagregarPeliculaSect()" class="sidebar-text">Agregar Película</a>
                 </li>
                 <li class="mt-4 sidebar-text">
                     <a href="#" onclick="hola()" class="sidebar-text">a</a>
@@ -49,21 +49,43 @@
                 </li>
             </ul>
         </div>
-        <div class="w-75 h-100">
-            <form id="AgregarPeli">
-                <input id="TituloPeli" type="text" placeholder="titulo" required>
-                <textarea id="DescripcionPeli" cols="30" rows="10" placeholder="descripcion" required></textarea>
-                <input id="PrecioPeli" type="number" placeholder="precio" required>
-                <input id="ImagenPeli" type="text" placeholder="url de imagen para pelicula" required>
-                <select id="categoriaPeli" required>
-                    <option value="" disabled selected>Categorias</option>
-                    <option>Nuevos Agregados</option>
-                    <option>Comedia</option>
-                    <option>Drama</option>
-                    <option>Terror</option>
-                </select>
-                <button type="submit" class="btn btn-primary">Guardar</button>
-            </form>
+        <div class="w-75 h-100 d-none" id="agregarPeliculaSect">
+            <div class=" d-flex flex-column align-items-center sidebar-text">
+                <h3 class="my-5">Agrega Película</h3>
+                <form id="AgregarPeli" class="d-flex flex-column w-100 ">
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Titulo de la pelicula</label>
+                        <input id="TituloPeli" type="text" required class="w-50">   
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Descripcion de la pelicula</label>
+                        <textarea id="DescripcionPeli" cols="30" rows="10" required class="w-50"></textarea>
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Precio de la pelicula</label>
+                        <input id="PrecioPeli" type="number" required   class="w-50">
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <label>Imagen para la card de la pelicula</label>
+                        <input id="ImagenPeli" type="text" required class="w-50">
+                    </div>
+                    <div class=" form-group d-flex flex-column align-items-center">
+                        <select id="categoriaPeli" required>
+                            <option value="" disabled selected>Categorias</option>
+                            <option>Nuevos Agregados</option>
+                            <option>Comedia</option>
+                            <option>Drama</option>
+                            <option>Terror</option>
+                        </select>
+                    </div>
+                    <div class="form-group d-flex flex-column align-items-center">
+                        <button type="submit" class="btn btn-outline-success w-25">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="w-75 h-100 ">
+
         </div>
     </main>
     
@@ -74,8 +96,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-    <script src="./app/sidebarHeight.js"></script>
-    <script src="./app/agregar.js"></script>
+    <script src="./app/sidebar.js"></script>
+    <script src="./app/nuevasPeliculas.js"></script>
 </body>
 
 </html>
