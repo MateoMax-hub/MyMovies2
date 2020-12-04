@@ -1,9 +1,5 @@
-
-
 //Categorias
 const subirCard = document.getElementById("subirCard");
-console.log(subirCard)
-console.log(document.getElementById('subirCard'))
 const TerrorUI = document.getElementById('Terror');
 const DramaUI = document.getElementById('Drama');
 const comediaUI = document.getElementById('Comedia');

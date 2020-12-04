@@ -52,6 +52,22 @@ html, body {
 #subirCard{
     display: flex; 
     justify-content: center;
+    flex-wrap: wrap;
+}
+#Terror{
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#Drama{
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#Comedia{
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
 }
 #subirCardd{
     display: flex; 

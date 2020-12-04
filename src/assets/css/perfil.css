@@ -1,0 +1,8 @@
+.suName{
+    display: flex;
+    justify-content: center;
+}
+.susName{
+    display: flex;
+    flex-direction: column;
+}

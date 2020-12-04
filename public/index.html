@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../src/assets/css/style.css">
     <link rel="stylesheet" href="../src/assets/css/footer.css">
+    <link rel="stylesheet" href="../src/assets/css/perfil.css">
     <link rel="stylesheet" href="../estilos.css">
 
     <title>Index</title>
@@ -26,8 +27,12 @@
             <nav>
                 <a href="#" class="activo">Inicio</a>
                 <a href="#">Películas</a>
-                <a onclick="endSession()" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cerrar Sesion</a>
                 <a href="./admin.html">Mi lista</a>
+                <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal7">
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg>
+                </a>
             </nav>
         </div>
     </header>
@@ -48,6 +53,37 @@
             </div>
         </div>
     </main>
+
+
+    <!-- Modal que muestra perfil -->
+
+
+        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="suName">
+                        <div class="susName">
+                            <svg width="7em" height="7em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                            <h5 id="suName">Nombre de la persona</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-info">Cerrar Seccion</button>
+                </div>
+            </div>
+            </div>
+        </div>
 
     <!-- Modal de agregar pelicula -->
 
@@ -186,169 +222,6 @@
         </div>
         <div id="Drama" class="d-flex p-2"></div>
     </section>
-
-
-    <!-- fila de peliculas uno 😎-->
-    <!-- <section id="comedia">
-        <div>
-            <h4 class="titularDeFila">Comedia</h4>
-        </div>
-        <div id="subirCardd">
-            <div id="subirCard">
-                <div>
-                    Button trigger modal
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
-                            <img src="https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x422/public/field/image/article/harry-potter-nueva-peli.jpeg?itok=xKc379KF"
-                                class="card-img-top" alt="...">
-                        </button>
-                    </div>
-
-                    Modal
-                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
-                                <div class="CardsModal card-body">
-                                    <h5 class="card-title">Titulo de pelicula</h5>
-                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <a href="#" class="btn btn-success">Alquilar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    Button trigger modal
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal33">
-                            <img src="https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x422/public/field/image/article/harry-potter-nueva-peli.jpeg?itok=xKc379KF"
-                                class="card-img-top" alt="...">
-                        </button>
-                    </div>
-
-                    Modal
-                    <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
-                                <div class="CardsModal card-body">
-                                    <h5 class="card-title">Titulo de pelicula</h5>
-                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <a href="#" class="btn btn-success">Alquilar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    Button trigger modal
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
-                            <img src="https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x422/public/field/image/article/harry-potter-nueva-peli.jpeg?itok=xKc379KF"
-                                class="card-img-top" alt="...">
-                        </button>
-                    </div>
-
-                    Modal
-                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
-                                <div class="CardsModal card-body">
-                                    <h5 class="card-title">Titulo de pelicula</h5>
-                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
-                                        elit.</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <a href="#" class="btn btn-success">Alquilar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="subirCard">
-                <div>
-                    Button trigger modal
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal22">
-                            <img src="https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x422/public/field/image/article/harry-potter-nueva-peli.jpeg?itok=xKc379KF"
-                                class="card-img-top" alt="...">
-                        </button>
-                    </div>
-
-                    Modal
-                    <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
-                                <div class="CardsModal card-body">
-                                    <h5 class="card-title">Titulo de pelicula</h5>
-                                    <p class="card-text"><b>Descripcion:</b>Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <a href="#" class="btn btn-success">Alquilar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    Button trigger modal
-                    <div class="CardsIndividuales">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal44">
-                            <img src="https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x422/public/field/image/article/harry-potter-nueva-peli.jpeg?itok=xKc379KF"
-                                class="card-img-top" alt="...">
-                        </button>
-                    </div>
-
-                    Modal
-                    <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
-                                <div class="CardsModal card-body">
-                                    <h5 class="card-title">Titulo de pelicula</h5>
-                                    <p class="card-text"><b>Descripcion:</b>Lorem iasasasasasasasasctetur adipisicing
-                                        elit.</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <a href="#" class="btn btn-success">Alquilar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-        </div>
-    </section>
-    <br> -->
-
     <!-- Footer -->
 
     <footer class="mt-5">
@@ -416,6 +289,7 @@
         crossorigin="anonymous"></script>
     <script src="./app/agregar.js"></script>
     <script src="./app/endSession.js"></script>
+    <script src="./app/perfil.js"></script>
 </body>
 
 </html>
