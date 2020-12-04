@@ -6,11 +6,11 @@
 }
 
 footer {
-    
-    width: 100%;
-    background: rgb(51, 51, 51);
+    width: 98%;
+    background: #0a000a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000ad, #0a000a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000ad, #0a000a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
-    
 }
 
 .container-all-footer{
@@ -58,7 +58,7 @@ footer {
 }
 
 .column3{
-    margin-left: 5px;
+    margin-right: 5px;
     max-width: 400px;
 
 }
@@ -99,12 +99,7 @@ footer {
     .container-body{
         flex-wrap: wrap;
     }
-.column1{
-    max-width: 100%;
-}
-
-    .column2,
-    .column3{
-        margin-top: 40px;
+    .column1{
+        max-width: 100%;
     }
 }
