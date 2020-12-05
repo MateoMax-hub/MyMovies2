@@ -3,7 +3,7 @@ const AllPelis= document.getElementById('AllPelis')
 const search = document.getElementById('searchOne');
 const SearchForm= document.getElementById('SearchForm');
 const Mostrar= document.getElementById('MostrarPelis');
-
+const MostrarPelisSect = document.getElementById('MostrarPelisSect')
 // Buscador o Search
 const allconst = JSON.parse(localStorage.getItem('userUI')) || [];
 displayAUser();
@@ -15,7 +15,7 @@ function displayAUser(){
 }
 
 SearchForm.onsubmit = (e) => {
-    Mostrar.classList= 'd-block';
+    MostrarPelisSect.classList= 'd-block';
     e.preventDefault();
     AllPelis.classList = 'd-none'
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
