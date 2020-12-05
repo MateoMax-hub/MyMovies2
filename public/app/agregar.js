@@ -10,11 +10,10 @@ const TituloTwo = document.getElementById('TituloPeliTwo');
 const DescripcionTwo = document.getElementById('DescripcionPeliTwo');
 let editUserId = '';
 
-// Agregar en Dom osea Html las nuevas Cards
 
 // Agregar en Dom osea Html las nuevas Cards
 
-function displayUser() {
+function displayUser(u) {
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
     const rowAgregados = [];
     const rowComedia = [];
@@ -368,13 +367,13 @@ function displayUser() {
 }
 displayUser()
 
-
-// data-toggle="modal" data-target="#exampleModalOneDireccion"
-
-
 // Eliminar Card
 
 function deleteUser(userUIid) {
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
     const filteredUsers = userUI.filter((agregar) => agregar.id !== userUIid);
+    const usersJson = JSON.stringify(filteredUsers);
+    localStorage.setItem('users', usersJson);
+    displayAUser();
 }
+
