@@ -15,9 +15,24 @@ $(document).ready(function () {
     
     $('#sidebar').height(height);
 });
-function showagregarPeliculaSect () {
+function showagregarPeliculaSect (hideOrShow) {
     const agregarPeliculaSect = document.getElementById('agregarPeliculaSect')
-    
-    agregarPeliculaSect.classList = 'w-75 h-100'
+    if (hideOrShow) {
+        agregarPeliculaSect.classList = 'w-75 h-100 overflow-auto'
+        showAgregarUsuariosSect(false)  
+    } else {
+        agregarPeliculaSect.classList = 'd-none'
+    }
+}
+
+
+function showAgregarUsuariosSect (hideOrShow) {
+    const agregarUsuariosSect = document.getElementById('agregarUsuariosSect')
+    if (hideOrShow) {
+        agregarUsuariosSect.classList = 'w-75 h-100 overflow-auto'
+        showagregarPeliculaSect(false)
+    } else {
+        agregarUsuariosSect.classList = 'd-none'
+    }
 }
 

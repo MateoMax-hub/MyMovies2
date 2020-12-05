@@ -35,6 +35,9 @@ header .logotipo {
 	color: var(--rojo);
 	font-size: 40px;
 }
+header .logotipo:hover {
+	text-decoration: none;
+}
 
 header nav a {
 	color: #AAA;

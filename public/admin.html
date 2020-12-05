@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
     <link rel="stylesheet" href="../src/assets/css/admin.css">
     <title>admin</title>
 </head>
 
 <body onresize="sidebarHeight()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="./login.html">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,20 +39,24 @@
         <div class="w-25 bg-my-light my-border h-100">
             <ul class=" mt-5 ml-5">
                 <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="showagregarPeliculaSect()" class="sidebar-text">Agregar Película</a>
+                    <a href="#" onclick="showagregarPeliculaSect('true')" class="sidebar-text">Agregar Película</a>
                 </li>
                 <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                    <a href="#" onclick="showAgregarUsuariosSect('true')" class="sidebar-text">Crear Usuario</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class=" mt-5 ml-5">
+                
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="hola()" class="sidebar-text">Lista de películas</a>
                 </li>
                 <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
-                </li>
-                <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="hola()" class="sidebar-text">a</a>
+                    <a href="#" onclick="hola()" class="sidebar-text">Lista de usuarios</a>
                 </li>
             </ul>
         </div>
-        <div class="w-75 h-100 d-none" id="agregarPeliculaSect">
+        <div class="w-75 h-100 d-none overflow-auto" id="agregarPeliculaSect">
             <div class=" d-flex flex-column align-items-center sidebar-text">
                 <h3 class="my-5">Agrega Película</h3>
                 <form id="AgregarPeli" class="d-flex flex-column w-100 ">
@@ -84,7 +91,48 @@
                 </form>
             </div>
         </div>
-        <div class="w-75 h-100 d-none">
+        <div class="w-75 h-100 overflow-auto d-none" id="agregarUsuariosSect">
+            <div class="d-flex h-100 w-100 justify-content-center align-items-center">
+                <div class="">
+                    <form class="" id="newUserForm">
+                        <div class="d-flex flex-row">
+                            <div class="form-group d-flex flex-column mr-5">
+                                <label class="sidebar-text">Usuario</label>
+                                <input type="text" id="userNameInput" required>
+                            </div>
+                            <div class="form-group d-flex flex-column ml-5">
+                                <label class="sidebar-text">Email</label>
+                                <input type="text" id="userEmailInput" required>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="form-group d-flex flex-column mr-5 mt-4">
+                                <label class="sidebar-text">Contraseña</label>
+                                <input type="text" id="userPasswordInput" required>
+                            </div>
+                            <div class="form-group d-flex flex-column ml-5 mt-4">
+                                <label class="sidebar-text">¿Admin?</label>
+                                <input type="checkbox" class="mt-2 mr-auto ml-auto" id="userAdminInput" value="true" name="true">
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="form-group d-flex flex-column mr-5 mt-4">
+                                <label class="sidebar-text">Id</label>
+                                <div class="d-flex flex-row align-items-center">
+                                    <input type="text" id="userIdInput" required>
+                                    <button class="btn btn-outline-dark random-button-button ml-1" onclick="randomId()" type="button"><i class="fas fa-dice random-button"></i></button>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-success ml-5 mt-4 h-25 align-self-center" type="submit">Agregar usuario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="w-75 h-100 d-none overflow-auto">
+
+        </div>
+        <div class="w-75 h-100 d-none overflow-auto">
 
         </div>
     </main>
@@ -98,6 +146,7 @@
         crossorigin="anonymous"></script>
     <script src="./app/sidebar.js"></script>
     <script src="./app/nuevasPeliculas.js"></script>
+    <script src="./app/newUserAdmin.js"></script>
 </body>
 
 </html>
