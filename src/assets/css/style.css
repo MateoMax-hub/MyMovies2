@@ -21,10 +21,13 @@ html, body {
     display: flex;
 }
 .CardsModal{
-    background-color: #2f2f2f;
+    background-color: #0c0c0c;
     color: white;
-    font-family: serif;
-    font-size: 18px;
+    font-family: cursive;
+    font-size: 16px;
+}
+.cardImg{
+    height: 100em;
 }
 .ConsultasBusqueda{
     display: flex;

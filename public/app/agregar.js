@@ -45,16 +45,15 @@ function displayUser(u) {
                                     </button>
                                     <h5 class="card-title">${agregar.titulo}</h5>
                                     <br>
-                                    <img src="${agregar.imagen}"class="card-img-top" alt="...">
+                                    <img src="${agregar.imagen}"class="cardImg card-img-top" alt="...">
                                     <br>
                                     <br>
                                     <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                    <p class="card-text"><b>Precio: </b>$${agregar.precio}</p>
                                 </div>
                                 <div class="CardsModal modal-body">
                                     <div style="display: flex; justify-content: space-between;">
                                         <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -134,12 +133,11 @@ function displayUser(u) {
                                     <br>
                                     <br>
                                     <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                    <p class="card-text"><b>Precio: </b>$${agregar.precio}</p>
                                 </div>
                                 <div class="CardsModal modal-body">
                                     <div style="display: flex; justify-content: space-between;">
                                         <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -219,12 +217,11 @@ function displayUser(u) {
                                     <br>
                                     <br>
                                     <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                    <p class="card-text"><b>Precio: </b>$${agregar.precio}</p>
                                 </div>
                                 <div class="CardsModal modal-body">
                                     <div style="display: flex; justify-content: space-between;">
                                         <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -304,12 +301,11 @@ function displayUser(u) {
                                     <br>
                                     <br>
                                     <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                    <p class="card-text"><b>Precio: </b>$${agregar.precio}</p>
                                 </div>
                                 <div class="CardsModal modal-body">
                                     <div style="display: flex; justify-content: space-between;">
                                         <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success">Alquilar</a>
+                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
                                     </div>
                                 </div>
                             </div>

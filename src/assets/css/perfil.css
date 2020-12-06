@@ -1,8 +1,13 @@
 .suName{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .susName{
     display: flex;
     flex-direction: column;
+}
+
+.bordes{
+    background-color: rgb(20, 20, 22);
 }
