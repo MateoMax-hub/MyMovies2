@@ -71,10 +71,6 @@ function redoEdit(t) {
     const categorie = editingMovie[0].categoria
     const description = editingMovie[0].descripcion
 
-    
-    
-    
-    
     if (t == 'title') {
         titleEditInput.value = title
     }if (t == 'price') {
