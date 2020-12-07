@@ -28,3 +28,23 @@ input[type=checkbox] {
     height: 37px;
     width: 37px;
 }
+.text-area-my {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 125px;
+}
+.mpp-1 {
+    margin-right: 54px;
+}
+.mpp-2 {
+    margin-right: 52px;
+}
+.mpp-3 {
+    margin-right: 43px;
+}
+.mpp-4 {
+    margin-right: 28px;
+}
+.redo-icon {
+    font-size: 13px;
+}

@@ -7,7 +7,6 @@ function sidebarHeight () {
         
         $('#sidebar').height(height);
     });
-    console.log('working');
 }
 $(document).ready(function () {
 
@@ -15,24 +14,54 @@ $(document).ready(function () {
     
     $('#sidebar').height(height);
 });
-function showagregarPeliculaSect (hideOrShow) {
+function showAgregarPeliculaSect(hideOrShow) {
     const agregarPeliculaSect = document.getElementById('agregarPeliculaSect')
     if (hideOrShow) {
         agregarPeliculaSect.classList = 'w-75 h-100 overflow-auto'
         showAgregarUsuariosSect(false)  
+        showListaPeliculasSect(false)
+        showListaUsersSect(false)
     } else {
         agregarPeliculaSect.classList = 'd-none'
     }
 }
 
 
-function showAgregarUsuariosSect (hideOrShow) {
+function showAgregarUsuariosSect(hideOrShow) {
     const agregarUsuariosSect = document.getElementById('agregarUsuariosSect')
     if (hideOrShow) {
         agregarUsuariosSect.classList = 'w-75 h-100 overflow-auto'
-        showagregarPeliculaSect(false)
+        showListaPeliculasSect(false)
+        showAgregarPeliculaSect(false)
+        showListaUsersSect(false)
+
     } else {
         agregarUsuariosSect.classList = 'd-none'
     }
 }
 
+function showListaPeliculasSect(hideOrShow) {
+    const listaPeliculasSect = document.getElementById('listaPeliculasSect')
+    if (hideOrShow) {
+        listaPeliculasSect.classList = 'w-75 h-100 overflow-auto'
+        showAgregarUsuariosSect(false)  
+        showAgregarPeliculaSect(false)
+        showListaUsersSect(false)
+
+    } else {
+        listaPeliculasSect.classList = 'd-none'
+    }
+}
+
+
+function showListaUsersSect(hideOrShow) {
+    const listaUsersSect = document.getElementById('listaUsersSect')
+    if (hideOrShow) {
+        listaUsersSect.classList = 'w-75 h-100 overflow-auto'
+        showAgregarUsuariosSect(false)  
+        showListaPeliculasSect(false)
+        showAgregarPeliculaSect(false)
+    } else {
+        listaUsersSect.classList = 'd-none'
+    }
+}

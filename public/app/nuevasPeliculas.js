@@ -35,4 +35,6 @@ formularioAgregar.onsubmit = (e) => {
 
     formularioAgregar.reset();
     // $('#exampleModalLabel').modal('hide');
+    displayAllMoviesTable()
+
 }

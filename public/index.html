@@ -23,15 +23,18 @@
 
     <header>
         <div class="contenedor">
-            <h2 id="adminTrue" class="d-none"><a href="./admin.html" class="logotipo" style="font-family: fantasy;">Mercado-Pelis</a> </h2>
+            <h2 id="adminTrue" class="d-none"><a href="./admin.html" class="logotipo"
+                    style="font-family: fantasy;">Mercado-Pelis</a> </h2>
             <h2 id="adminFalse" class="logotipo d-none" style="font-family: fantasy;"> Mercado-Pelis</h2>
             <nav>
                 <a href="#" class="activo">Inicio</a>
                 <a href="#">Películas</a>
                 <a href="./admin.html">Mi lista</a>
                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal7">
-                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                     </svg>
                 </a>
             </nav>
@@ -42,9 +45,10 @@
         <div class="pelicula-principal">
             <div class="contenedor">
                 <div class="m-4" style="font-family: cursive;">
-                    <h3 class="titulo" >IT</h3>
+                    <h3 class="titulo">IT</h3>
                     <p class="descripcion">
-                        It  es una novela de terror publicada en 1986 por el escritor estadounidense Stephen King. Cuenta la historia de un grupo de siete niños que son aterrorizados por un malvado monstruo.
+                        It es una novela de terror publicada en 1986 por el escritor estadounidense Stephen King. Cuenta
+                        la historia de un grupo de siete niños que son aterrorizados por un malvado monstruo.
                     </p>
                     <div class="separacion">
                         <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
@@ -59,11 +63,11 @@
     <!-- Modal que muestra perfil -->
 
 
-        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+    <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -71,20 +75,23 @@
                 <div class="modal-body">
                     <div class="suName">
                         <div class="susName">
-                            <svg width="7em" height="7em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            <svg width="7em" height="7em" viewBox="0 0 16 16" class="bi bi-person-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                             </svg>
                             <h5 id="suName">Nombre de la persona</h5>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-danger">Cerrar Seccion</button>
+                    <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-danger">Cerrar
+                        Seccion</button>
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
 
     <!-- Modal de agregar pelicula -->
 
@@ -124,8 +131,8 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">$</span>
                                         </div>
-                                        <input type="number" class="form-control" id="PrecioPeli" placeholder="Precio" required
-                                            maxlength="20">
+                                        <input type="number" class="form-control" id="PrecioPeli" placeholder="Precio"
+                                            required maxlength="20">
                                     </div>
                                 </div>
                                 <br>
@@ -183,7 +190,8 @@
                 <form id="SearchForm">
                     <div id="search">
                         <div style="margin: 0% 5%;">
-                            <input class="form-control" type="search" id="searchOne" placeholder="Search" aria-label="Search">
+                            <input class="form-control" type="search" id="searchOne" placeholder="Search"
+                                aria-label="Search">
                         </div>
                         <button class="btn btn-outline-info">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
@@ -207,7 +215,7 @@
             <div id="subirCard" class="d-flex p-2">
             </div>
         </div>
-    
+
         <section>
             <div>
                 <h4 class="titularDeFila">Comedia</h4>
@@ -226,7 +234,7 @@
             </div>
             <div id="Drama" class="d-flex p-2"></div>
         </section>
-        
+
     </section>
     <section id="MostrarPelisSect" class="d-none p-2">
         <div>
@@ -242,14 +250,14 @@
             <div class="container-body">
 
                 <div class="column1">
-                 <h1>Información sobre nosotros</h1>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.!</p>
+                    <h1>Información sobre nosotros</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.!</p>
                 </div>
                 <div class="column2">
                     <h1>Nuestras Redes</h1>
                     <div class="row">
                         <a href="https://www.facebook.com/"></a>
-                            <i class="fab fa-facebook"></i><label>Seguinos en FB</label>
+                        <i class="fab fa-facebook"></i><label>Seguinos en FB</label>
                         </a>
                     </div>
 
@@ -268,7 +276,8 @@
                 <div class=" column3">
                     <h1>Contactos</h1>
                     <div class="row2">
-                        <i class="fas fa-home"></i><label>Lorem ipsum dolor sit amet consectetur adipisicing elit.</label>
+                        <i class="fas fa-home"></i><label>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</label>
                     </div>
 
                     <div class="row2">

@@ -28,10 +28,10 @@ SearchForm.onsubmit = (e) => {
     displayFilterMovie(filteredUsers)
 }
 
-function displayFilterMovie(movie) {
+function displayFilterMovie(movies) {
     const rowMostrar = [];
-    for (let i = 0; i < movie.length; i++) {
-        const agregar = movie[i];
+    for (let i = 0; i < movies.length; i++) {
+        const agregar = movies[i];
         const tr= 
         `<div class="prueba">
                     <!-- Button trigger modal -->
@@ -73,7 +73,7 @@ function displayFilterMovie(movie) {
                 <!-- Seccion de Cambios de Pelicula -->
                 <section>
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModalUi" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="exampleModalUiaaaaa" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -113,6 +113,6 @@ function displayFilterMovie(movie) {
         
         rowMostrar.push(tr)
     }
-    console.log(movie);
+    console.log(movies);
     Mostrar.innerHTML=rowMostrar.join('')
 }

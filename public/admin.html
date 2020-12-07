@@ -39,7 +39,7 @@
         <div class="w-25 bg-my-light my-border h-100">
             <ul class=" mt-5 ml-5">
                 <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="showagregarPeliculaSect('true')" class="sidebar-text">Agregar Película</a>
+                    <a href="#" onclick="showAgregarPeliculaSect('true')" class="sidebar-text">Agregar Película</a>
                 </li>
                 <li class="mt-4 sidebar-text">
                     <a href="#" onclick="showAgregarUsuariosSect('true')" class="sidebar-text">Crear Usuario</a>
@@ -49,10 +49,10 @@
             <ul class=" mt-5 ml-5">
                 
                 <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="hola()" class="sidebar-text">Lista de películas</a>
+                    <a href="#" onclick="showListaPeliculasSect('true')" class="sidebar-text">Lista de películas</a>
                 </li>
                 <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="hola()" class="sidebar-text">Lista de usuarios</a>
+                    <a href="#" onclick="showListaUsersSect('true')" class="sidebar-text">Lista de usuarios</a>
                 </li>
             </ul>
         </div>
@@ -95,6 +95,7 @@
             <div class="d-flex h-100 w-100 justify-content-center align-items-center">
                 <div class="">
                     <form class="" id="newUserForm">
+                        <h2 class=" text-center mb-5">Agregar Usuario</h2>
                         <div class="d-flex flex-row">
                             <div class="form-group d-flex flex-column mr-5">
                                 <label class="sidebar-text">Usuario</label>
@@ -129,14 +130,84 @@
                 </div>
             </div>
         </div>
-        <div class="w-75 h-100 d-none overflow-auto">
-
+        <div id="listaPeliculasSect" class="w-75 h-100 overflow-auto">
+            <h2 class="my-5 text-center">Lista peliculas</h2>
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody id="moviesTBody">
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="w-75 h-100 d-none overflow-auto">
-
+        <div id="listaUsersSect" class="w-75 h-100 d-none overflow-auto">
+            <h1>hix2</h1>
         </div>
     </main>
     
+    <section id="modalsSect">
+
+    </section>
+    <section id="editModalsSect">
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><b>Pelicula Modificando:</b></h5>
+                        <button type="button" class="btn-close btn" data-dismiss="modal" aria-label="Close">
+                            <b><span aria-hidden="true">×</span></b>
+                        </button>
+                    </div>
+                    <form class="d-flex flex-column" id="editMovieForm">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="ml-5 mpp-1"><b>Titulo:</b></label>
+                                <input type="text" id="titleEditInput">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('title')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                            <div class="form-group">
+                                <label class="ml-5 mpp-2"><b>Precio:</b></label>
+                                <input type="text" id="priceEditInput">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('price')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                            <div class="form-group">
+                                <label class="ml-5 mpp-3"><b>Imagen:</b></label>
+                                <input type="text" id="imageEditInput">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('img')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                            <div class="form-group">
+                                <label class="ml-5 mpp-4"><b>Categoria:</b></label>
+                                <select name="" id="categorieEditInput">
+                                    <option value="" disabled selected>Categorias</option>
+                                    <option>Nuevos Agregados</option>
+                                    <option>Comedia</option>
+                                    <option>Drama</option>
+                                    <option>Terror</option>
+                                </select>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('categorie')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                            <div class="form-group d-flex">
+                                <label class="ml-5 mr-3"><b>Descripcion:</b></label>
+                                <textarea name="" id="descriptionEditInput" cols="25" rows="6" class="text-area-my"></textarea>
+                                <button type="button" class="btn btn-outline-primary redo-icon align-self-start ml-3" onclick="redoEdit('description')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-success">Guardar cambios</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -147,6 +218,8 @@
     <script src="./app/sidebar.js"></script>
     <script src="./app/nuevasPeliculas.js"></script>
     <script src="./app/newUserAdmin.js"></script>
+    <script src="./app/displayPeliculasAdmin.js"></script>
+    <script src="./app/editPeliculas.js"></script>
 </body>
 
 </html>
