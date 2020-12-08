@@ -23,7 +23,7 @@ function displayMoviesTable (movies) {
         const modal = `
             <!-- Modal -->
             <div class="modal fade" id="modalOf${element.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">${element.titulo}</h5>
@@ -36,7 +36,9 @@ function displayMoviesTable (movies) {
                             <br>
                             <b>Categorias:</b>${element.categoria}
                             <br>
-                            <b>Descripción:</b>${element.descripcion}
+                            <div>
+                                <b>Descripción:</b>${element.descripcion}
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-outline-warning" onclick="editMovie('${element.id}')"><i class="fas fa-edit"></i></button>
