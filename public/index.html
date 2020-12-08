@@ -61,26 +61,29 @@
 
         <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="bordes modal-header">
-                    
+            <div class="bordes">
+                <div class="Datos modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
                     <div class="suName">
                         <div class="susName">
-                            <svg width="7em" height="7em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                            </svg>
-                            <h5 id="suName">Nombre de la persona</h5>
+                            <div>
+                                <a>
+                                    <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="datosPerfil">
+                                <p id="suName"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="bordes modal-footer">
-                    <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-danger">Cerrar Seccion</button>
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal"><b>Cerrar</b></button>
+                    <button type="button" href="./login" onclick="endSession()" id="dropdown01" class="btn btn-danger"><b>Salir</b></button>
                 </div>
             </div>
             </div>
@@ -151,7 +154,7 @@
         <div class="ConsultasBusqueda">
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-info dropdown-toggle"
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-danger dropdown-toggle"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Peliculas
                     </button>
@@ -183,7 +186,7 @@
                         <div style="margin: 0% 5%;">
                             <input class="form-control" type="search" id="searchOne" placeholder="Search" aria-label="Search">
                         </div>
-                        <button class="btn btn-outline-info">
+                        <button class="btn btn-outline-danger">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -197,7 +200,6 @@
             </div>
         </div>
     </section>
-
     <!-- Subir pelicula nueva -->
     <section id="AllPelis">
         <div>
@@ -224,7 +226,6 @@
             </div>
             <div id="Drama" class="d-flex p-2"></div>
         </section>
-        
     </section>
     <section id="MostrarPelisSect" class="d-none p-2">
         <div>
@@ -238,7 +239,6 @@
     <footer class="mt-5">
         <div class="container-all-footer">
             <div class="container-body">
-
                 <div class="column1">
                  <h1>Información sobre nosotros</h1>
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.!</p>

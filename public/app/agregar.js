@@ -36,29 +36,28 @@ function displayUser(u) {
     
                     <!-- Modal -->
                     <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
+                    aria-hidden="true">
+                    <div class=" modal-dialog">
+                        <div class="fondoDeCard">
+                            <div class="ofCard">
                                 <div class="CardsModal card-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h5 class="card-title">${agregar.titulo}</h5>
-                                    <br>
-                                    <img src="${agregar.imagen}"class="cardImg card-img-top" alt="...">
-                                    <br>
-                                    <br>
-                                    <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
+                                    <div>
+                                        <h5 class="card-title">${agregar.titulo}</h5>
+                                        <img src="${agregar.imagen}"class="cardImg" alt="...">
                                     </div>
+                                    <div class="CardsM">
+                                        <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardsModal modal-body">
+                                <div>
+                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 <!-- Seccion de Cambios de Pelicula -->
@@ -120,29 +119,28 @@ function displayUser(u) {
     
                     <!-- Modal -->
                     <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
+                    aria-hidden="true">
+                    <div class=" modal-dialog">
+                        <div class="fondoDeCard">
+                            <div class="ofCard">
                                 <div class="CardsModal card-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h5 class="card-title">${agregar.titulo}</h5>
-                                    <br>
-                                    <img src="${agregar.imagen}"class="card-img-top" alt="...">
-                                    <br>
-                                    <br>
-                                    <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
+                                    <div>
+                                        <h5 class="card-title">${agregar.titulo}</h5>
+                                        <img src="${agregar.imagen}"class="cardImg" alt="...">
                                     </div>
+                                    <div class="CardsM">
+                                        <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardsModal modal-body">
+                                <div>
+                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 <!-- Seccion de Cambios de Pelicula -->
@@ -197,36 +195,34 @@ function displayUser(u) {
                     <!-- Button trigger modal -->
                     <div class="CardsIndividuales">
                         <a type="button" data-toggle="modal" data-target="#${agregar.id}">
-                            <img src="${agregar.imagen}"
-                            class="card-img-top" alt="...">
+                            <img src="${agregar.imagen}" class="card-img-top" alt="...">
                         </a>
                     </div>
     
                     <!-- Modal -->
                     <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
+                    aria-hidden="true">
+                    <div class=" modal-dialog">
+                        <div class="fondoDeCard">
+                            <div class="ofCard">
                                 <div class="CardsModal card-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h5 class="card-title">${agregar.titulo}</h5>
-                                    <br>
-                                    <img src="${agregar.imagen}"class="card-img-top" alt="...">
-                                    <br>
-                                    <br>
-                                    <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
+                                    <div>
+                                        <h5 class="card-title">${agregar.titulo}</h5>
+                                        <img src="${agregar.imagen}"class="cardImg" alt="...">
                                     </div>
+                                    <div class="CardsM">
+                                        <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardsModal modal-body">
+                                <div>
+                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 <!-- Seccion de Cambios de Pelicula -->
@@ -235,7 +231,7 @@ function displayUser(u) {
                     <div class="modal fade" id="exampleModalUi" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
+                            <div class="fondoDeCard">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Cambios</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -286,32 +282,32 @@ function displayUser(u) {
                         </a>
                     </div>
     
-                    <!-- Modal -->
-                    <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class=" modal-dialog">
-                            <div class="modal-content">
+                <!-- Modal -->
+
+                <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class=" modal-dialog">
+                        <div class="fondoDeCard">
+                            <div class="ofCard">
                                 <div class="CardsModal card-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h5 class="card-title">${agregar.titulo}</h5>
-                                    <br>
-                                    <img src="${agregar.imagen}"class="card-img-top" alt="...">
-                                    <br>
-                                    <br>
-                                    <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                </div>
-                                <div class="CardsModal modal-body">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <!-- Button trigger modal -->  
-                                        <a href="#" class="btn btn-success"><b>$${agregar.precio} Arg</b></a>
+                                    <div>
+                                        <h5 class="card-title">${agregar.titulo}</h5>
+                                        <img src="${agregar.imagen}"class="cardImg" alt="...">
                                     </div>
+                                    <div class="CardsM">
+                                        <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardsModal modal-body">
+                                <div>
+                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
                 <!-- Seccion de Cambios de Pelicula -->
                 <section>

@@ -44,8 +44,6 @@ loginForm.onsubmit = (e) =>{
     const ingresoObligatorio= usersRegister.find((usersRegister) => usersRegister.usuario === usuarioLG && usersRegister.password === passwordLG);
     
     if (ingresoObligatorio) {
-        console.log('higigi')
-
         window.location.href= ('./index.html')
         const sessionJSON = JSON.stringify(ingresoObligatorio)
         localStorage.setItem('sesion',sessionJSON)
