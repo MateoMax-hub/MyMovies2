@@ -20,11 +20,23 @@ html, body {
 .Cards{
     display: flex;
 }
+.fondoDeCard{
+    background-color: #1b1a1ad0;
+    border-radius: 2rem;
+}
+.ofCard{
+    display: flex;
+}
 .CardsModal{
-    background-color: #2f2f2f;
     color: white;
-    font-family: serif;
-    font-size: 18px;
+    font-family: cursive;
+    font-size: 16px;
+    display: flex;
+}
+.CardsM{
+    display: flex;
+    flex-direction: column;
+    margin: 4%;
 }
 .ConsultasBusqueda{
     display: flex;
@@ -44,6 +56,9 @@ html, body {
     transition-property: all;
     transition-duration: 1s;
     transition-delay: 0s, 0s;
+}
+.cardImg{
+    width: 250px;
 }
 .CardsIndividuales:hover{
     transform: scale(1.4);
@@ -115,6 +130,9 @@ html, body {
         display: flex;
         flex-direction: column;
         margin: 2% 17%;
+    }
+    .cardImg{
+        width: 200px;
     }
     .titularDeFila{
         font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
