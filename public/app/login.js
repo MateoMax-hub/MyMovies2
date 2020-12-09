@@ -3,7 +3,16 @@ const userLogin = document.getElementById('userLoginInput');
 const passwordLogin = document.getElementById('passwordLoginInput');
 
 const usersRegister= JSON.parse(localStorage.getItem('usersRegister')) || [];
-const userAdminDefault = {usuario: "pelisAdmin", email: "hi@hi", password: "123admin", id: "_111111111", admin: true}
+const userAdminDefault = {
+    usuario: "pelisAdmin",
+    email: "hi@hi",
+    password: "123admin",
+    id: "_111111111",
+    admin: true,
+    enCarrito: '',
+    enAlquiler: '',
+    estado: 'habilitada'
+}
 usersRegister.push(userAdminDefault)
 
 const local1 = localStorage.key(0)

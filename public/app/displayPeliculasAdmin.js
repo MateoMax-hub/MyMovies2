@@ -15,6 +15,7 @@ function displayMoviesTable (movies) {
                 <td>${element.precio}</td>
                 <td>${element.categoria}</td>
                 <td>
+                    <button class="btn btn-danger"  onclick="deleteMovie('${element.id}')"><i class="fas fa-trash-alt"></i></button>
                     <button class="btn btn-outline-warning"  onclick="editMovie('${element.id}')"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-outline-dark" data-toggle="modal" data-target="#modalOf${element.id}">más info</button>
                 </td>

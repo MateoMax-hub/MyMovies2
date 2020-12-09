@@ -1,0 +1,65 @@
+[
+    {
+        "admin": true,
+        "email": "hi@hi",
+        "id": "_111111111",
+        "password": "123admin",
+        "usuario": "pelisAdmin"
+    },
+    {
+        "admin": false,
+        "email": "max.mateo.02@gmail.com",
+        "id": "_r2y5j7j8e",
+        "password": "123",
+        "usuario": "max"
+    },
+    {
+        "admin": false,
+        "email": "hi@hi",
+        "id": "_1cadmlfwd",
+        "password": "123",
+        "usuario": "hi"                                                            
+    },
+    {
+        "admin": true,
+        "email": "aaaa@aa",
+        "id": "_wa3dyaqyv",
+        "password": "555555",
+        "usuario": "adminn" 
+    },
+    {
+        "admin": false,
+        "email": "aa@aa",
+        "id": "_srul467g6",
+        "password": "525252",
+        "usuario": "awddwdw" 
+    },
+    {
+        "admin": false,
+        "email": "lopez@aa",
+        "id": "_fmt34kxeq",
+        "password": "hiworld",
+        "usuario": "lopez" 
+    },
+    {
+        "admin": false,
+        "email": "juarez@aa",
+        "id": "_jbb3sa817",
+        "password": "pagateTuCuenta",
+        "usuario": "juarez" 
+    },
+    {
+        "admin": false,
+        "email": "jj@aa",
+        "id": "_ee11imzwp",
+        "password": "iDidIt",
+        "usuario": "jj" 
+    },
+    {
+        "admin": false,
+        "email": "rick@aa",
+        "id": "_ic5knhozg",
+        "password": "iDidItToo",
+        "usuario": "rick" 
+    }
+]

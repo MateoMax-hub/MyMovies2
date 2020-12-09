@@ -30,11 +30,15 @@ newUserForm.onsubmit= (e) =>{
         email: email,
         password: password,
         id: id,
-        admin: admin
+        admin: admin,
+        enCarrito: '',
+        enAlquiler: '',
+        estado: 'habilitada'
     })
 
     const usersJsonS= JSON.stringify(usersRegister);
     localStorage.setItem('usersRegister', usersJsonS);
     console.log(usersRegister)
     newUserForm.reset();
+    displayAllUsersTable()
 }

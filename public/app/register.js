@@ -23,7 +23,10 @@ formUser.onsubmit= (e) =>{
         email: email,
         password: password,
         id: generateId(),
-        admin: false
+        admin: false,
+        enCarrito: '',
+        enAlquiler: '',
+        estado: 'habilitada'
     })
 
     const usersJsonS= JSON.stringify(usersRegister);

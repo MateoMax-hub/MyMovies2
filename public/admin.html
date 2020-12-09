@@ -130,7 +130,7 @@
                 </div>
             </div>
         </div>
-        <div id="listaPeliculasSect" class="w-75 h-100 overflow-auto">
+        <div id="listaPeliculasSect" class="w-75 h-100 overflow-auto d-none">
             <h2 class="my-5 text-center">Lista peliculas</h2>
             <div>
                 <table class="table table-striped">
@@ -140,6 +140,7 @@
                             <th scope="col">Titulo</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Categoria</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody id="moviesTBody">
@@ -147,8 +148,22 @@
                 </table>
             </div>
         </div>
-        <div id="listaUsersSect" class="w-75 h-100 d-none overflow-auto">
-            <h1>hix2</h1>
+        <div id="listaUsersSect" class="w-75 h-100  overflow-auto">
+            <h2 class="my-5 text-center">Lista Usuarios</h2>
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTBody">
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
     
@@ -208,6 +223,52 @@
             </div>
         </div>
     </section>
+    <section id="usersModalsSect">
+
+    </section>
+    <section id="usersEditModalsSect">
+        <!-- Modal -->
+        <div class="modal fade" id="editUsersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Usuario</h5>
+                        <button type="button" class="btn-close btn" data-dismiss="modal" aria-label="Close">
+                            <b><span aria-hidden="true">&times;</span></b>
+                        </button>
+                    </div>
+                    <form class="d-flex flex-column" id="editUsersForm">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="ml-5 mr-4"><b>Nombre:</b></label>
+                                <input type="text" id="nombreEditInput">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('nombre')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                            <div class="form-group">
+                                <label class="ml-5 mr-4 "><b>Email:</b></label>
+                                <input type="text" id="emailEditInput">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('email')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                            <div class="form-group">
+                                <label class="ml-5 mr-4 "><b>Contraseña:</b></label>
+                                <input type="text" id="contraseñaEditInput">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('contra')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                            <div class="form-group">
+                                <label class="ml-5 mr-4 "><b>¿Admin?:</b></label>
+                                <input type="checkbox" class="mt-2 mr-auto ml-auto" id="adminEditInput" value="true" name="true">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('admin')"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-success">Guardar cambios</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -217,9 +278,13 @@
         crossorigin="anonymous"></script>
     <script src="./app/sidebar.js"></script>
     <script src="./app/nuevasPeliculas.js"></script>
+    <script src="./app/displayUsersAdmin.js"></script>
     <script src="./app/newUserAdmin.js"></script>
     <script src="./app/displayPeliculasAdmin.js"></script>
     <script src="./app/editPeliculas.js"></script>
+    <script src="./app/datos.js"></script>
+    <script src="./app/editUsers.js"></script>
+    <script src="./app/deleteUserAndMovie.js"></script>
 </body>
 
 </html>
