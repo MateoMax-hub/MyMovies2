@@ -38,7 +38,7 @@ function displayUser(u) {
                     <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class=" modal-dialog">
-                        <div class="fondoDeCard">
+                        <div class="fondoDeCard modal-content">
                             <div class="ofCard">
                                 <div class="CardsModal card-body">
                                     <div>
@@ -121,7 +121,7 @@ function displayUser(u) {
                     <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class=" modal-dialog">
-                        <div class="fondoDeCard">
+                        <div class="fondoDeCard modal-content">
                             <div class="ofCard">
                                 <div class="CardsModal card-body">
                                     <div>
@@ -203,7 +203,7 @@ function displayUser(u) {
                     <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class=" modal-dialog">
-                        <div class="fondoDeCard">
+                        <div class="fondoDeCard modal-content">
                             <div class="ofCard">
                                 <div class="CardsModal card-body">
                                     <div>
@@ -287,7 +287,7 @@ function displayUser(u) {
                 <div class="modal fade" id="${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class=" modal-dialog">
-                        <div class="fondoDeCard">
+                        <div class="fondoDeCard modal-content">
                             <div class="ofCard">
                                 <div class="CardsModal card-body">
                                     <div>
