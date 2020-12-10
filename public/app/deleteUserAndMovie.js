@@ -12,3 +12,24 @@ function deleteMovie(id) {
     localStorage.setItem('userUI',deletingMovieJSON)
     displayAllMoviesTable()
 }
+
+function deleteInCarrito(id) {
+    const sesion = userSesion()
+    const userCart = JSON.parse(localStorage.getItem('usersRegister')) || [];
+    const deletingMovieCart = sesion.enCarrito.filter((i) => i.id !== id)
+    sesion.enCarrito = deletingMovieCart
+    
+    const usersAfterDelete = userCart.map ((u) => {
+        if (u.id == sesion.id) {
+            const array = {
+                ...sesion
+            }
+            return array
+        } else {
+            return u
+        }
+    })
+    const usersAfterDeleteJSON = JSON.stringify(usersAfterDelete)
+    localStorage.setItem('usersRegister',usersAfterDeleteJSON)
+    displayAllCarrito()
+}

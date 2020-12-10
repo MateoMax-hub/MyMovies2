@@ -9,7 +9,7 @@ const userAdminDefault = {
     password: "123admin",
     id: "_111111111",
     admin: true,
-    enCarrito: '',
+    enCarrito: [{id:"_2fvci2akm"},{id:"_4y58hnz6c"}],
     enAlquiler: '',
     estado: 'habilitada'
 }

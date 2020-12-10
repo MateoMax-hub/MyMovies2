@@ -52,7 +52,7 @@ function displayUser(u) {
                             </div>
                             <div class="CardsModal modal-body">
                                 <div>
-                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
+                                    <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,8 @@ function displayUser(u) {
                             </div>
                             <div class="CardsModal modal-body">
                                 <div>
-                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
+                                    <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
+
                                 </div>
                             </div>
                         </div>
@@ -217,7 +218,8 @@ function displayUser(u) {
                             </div>
                             <div class="CardsModal modal-body">
                                 <div>
-                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
+                                    <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
+
                                 </div>
                             </div>
                         </div>
@@ -301,7 +303,8 @@ function displayUser(u) {
                             </div>
                             <div class="CardsModal modal-body">
                                 <div>
-                                    <a href="#" class="btn btn-outline-success"><b>$${agregar.precio} Arg</b></a>
+                                    <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
+
                                 </div>
                             </div>
                         </div>
