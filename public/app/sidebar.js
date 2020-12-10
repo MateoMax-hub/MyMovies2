@@ -1,4 +1,3 @@
-
 function sidebarHeight () {
 
     $(document).ready(function () {
@@ -17,7 +16,7 @@ $(document).ready(function () {
 function showAgregarPeliculaSect(hideOrShow) {
     const agregarPeliculaSect = document.getElementById('agregarPeliculaSect')
     if (hideOrShow) {
-        agregarPeliculaSect.classList = 'w-75 h-100 overflow-auto'
+        agregarPeliculaSect.classList = 'w-100 h-100 overflow-auto'
         showAgregarUsuariosSect(false)  
         showListaPeliculasSect(false)
         showListaUsersSect(false)
@@ -30,7 +29,7 @@ function showAgregarPeliculaSect(hideOrShow) {
 function showAgregarUsuariosSect(hideOrShow) {
     const agregarUsuariosSect = document.getElementById('agregarUsuariosSect')
     if (hideOrShow) {
-        agregarUsuariosSect.classList = 'w-75 h-100 overflow-auto'
+        agregarUsuariosSect.classList = 'w-100 h-100 overflow-auto'
         showListaPeliculasSect(false)
         showAgregarPeliculaSect(false)
         showListaUsersSect(false)
@@ -43,7 +42,7 @@ function showAgregarUsuariosSect(hideOrShow) {
 function showListaPeliculasSect(hideOrShow) {
     const listaPeliculasSect = document.getElementById('listaPeliculasSect')
     if (hideOrShow) {
-        listaPeliculasSect.classList = 'w-75 h-100 overflow-auto'
+        listaPeliculasSect.classList = 'w-100 h-100 overflow-auto'
         showAgregarUsuariosSect(false)  
         showAgregarPeliculaSect(false)
         showListaUsersSect(false)
@@ -57,7 +56,7 @@ function showListaPeliculasSect(hideOrShow) {
 function showListaUsersSect(hideOrShow) {
     const listaUsersSect = document.getElementById('listaUsersSect')
     if (hideOrShow) {
-        listaUsersSect.classList = 'w-75 h-100 overflow-auto'
+        listaUsersSect.classList = 'w-100 h-100 overflow-auto'
         showAgregarUsuariosSect(false)  
         showListaPeliculasSect(false)
         showAgregarPeliculaSect(false)

@@ -6,7 +6,7 @@
 }
 
 footer {
-    width: 98%;
+    width: 100%;
     background: #0a000a;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #6f0000ad, #0a000a);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #6f0000ad, #0a000a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
