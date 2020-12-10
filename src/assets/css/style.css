@@ -141,3 +141,15 @@ html, body {
         font-size: 20px;
     }
 }
+
+
+/* style para mantener el footer abajo del todo en la lista de peliculas de usuarios en su html */
+.mx-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.footer-espacing {
+    margin-top: auto;
+}
+/* -------------------------------------------------------------------------------------  */
