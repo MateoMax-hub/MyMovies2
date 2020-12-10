@@ -25,7 +25,7 @@ formUser.onsubmit= (e) =>{
         id: generateId(),
         admin: false,
         enCarrito: [],
-        enAlquiler: '',
+        enAlquiler: [],
         estado: 'habilitada'
     })
 

@@ -8,8 +8,13 @@ function endBuy() {
     const sesion = userSesion()
     const users = JSON.parse(localStorage.getItem('usersRegister')) || [];
 
+    
+    for (let i = 0; i < sesion.enCarrito.length; i++) {
+        const element = sesion.enCarrito[i];
+        sesion.enAlquiler.push(element)
+    }
     sesion.enCarrito = []
-
+    
     const usersAfterBuy = users.map((i) => {
         if (i.id == sesion.id) {
             const array = {
@@ -21,6 +26,11 @@ function endBuy() {
             return i
         }
     })
+
+
+
+    
+
     const usersAfterBuyJSON = JSON.stringify(usersAfterBuy)
     const sesionJSON = JSON.stringify(sesion)
     localStorage.setItem('sesion',sesionJSON)
@@ -28,5 +38,4 @@ function endBuy() {
     displayAllCarrito()
     $('#modalCarrito').modal('show')
     $('#buyModal').modal('hide')
-
 }

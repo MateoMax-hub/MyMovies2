@@ -10,7 +10,7 @@ const userAdminDefault = {
     id: "_111111111",
     admin: true,
     enCarrito: [{id:"_2fvci2akm"},{id:"_4y58hnz6c"}],
-    enAlquiler: '',
+    enAlquiler: [],
     estado: 'habilitada'
 }
 usersRegister.push(userAdminDefault)
