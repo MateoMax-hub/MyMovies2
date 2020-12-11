@@ -61,25 +61,44 @@
             <a href="#" onclick="showListaUsersSect('true')" class="hveCard sidebar-text">Lista de usuarios</a>
         </div>
     </section>
-
+    <div>
+        <form id="formButoon">
+            <div style="margin: 2%;">
+                <a id="buttonBurger" type="button" onclick="boton()">
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-plus-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                    </svg>
+                </a>
+            </div>
+        </form>
+    </div>
     <main class="d-flex" id="sidebar">
+        
         <section>
-            <div class="cardDeBotones">
-                <div style="display: flex;">
-                    <li class="mt-1 sidebar-text">
-                        <a href="#" onclick="showAgregarPeliculaSect('true')" class="sidebar-text"><div class="cardCuadrado">Agregar Película</div></a>
-                    </li>
-                    <li class="mt-1 sidebar-text">
-                        <a href="#" onclick="showAgregarUsuariosSect('true')" class="sidebar-text"> <div class="cardCuadrado">Crear Usuario</div></a>
-                    </li>
+            <div>
+                <div id="buttonBurgerDe" >
+                    <a class="BoottonX"  type="button" onclick="voton()">
+                        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
                 </div>
-                <div style="display: flex;">
-                    <li class="mt-1 sidebar-text">
-                        <a href="#" onclick="showListaPeliculasSect('true')" class="sidebar-text"><div class="cardCuadrado">Lista de películas</div></a>
-                    </li>
-                    <li class="mt-1 sidebar-text">
-                        <a href="#" onclick="showListaUsersSect('true')" class="sidebar-text"><div class="cardCuadrado">Lista de usuarios</div></a>
-                    </li>
+                <div id="burgerButon"  class="cardDeBotones">
+                    <a href="#" onclick="showAgregarPeliculaSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Agregar Película</div>
+                    </a>
+    
+                    <a href="#" onclick="showAgregarUsuariosSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Crear Usuario</div>
+                    </a>
+    
+                    <a href="#" onclick="showListaPeliculasSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Lista de películas</div>
+                    </a>
+    
+                    <a href="#" onclick="showListaUsersSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Lista de usuarios</div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -213,7 +232,7 @@
                 </table>
             </div>
         </div>
-        <div id="listaUsersSect" class="w-75 h-100  overflow-auto">
+        <div id="listaUsersSect" class="w-100 h-100  overflow-auto">
             <h2 class="my-5 text-center">Lista Usuarios</h2>
             <div>
                 <table class="table table-striped">
@@ -353,7 +372,10 @@
             <div class="container-body">
                 <div class="column1">
                     <h1>Información sobre nosotros</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.!</p>
+                    <p>Este es un proyecto que salio gracias a un desafio de Rolling Code Scohol, Este proyecto consiste
+                        en una pagina para poder subir peliculas y bajar peliculas de las paginas de maneta
+                        independiente si sos usuario pero solo el administrador puede determinar si la pelicula se queda
+                        o no.</p>
                 </div>
                 <div class="column2">
                     <h1>Nuestras Redes</h1>
@@ -419,6 +441,7 @@
     <script src="./app/datos.js"></script>
     <script src="./app/editUsers.js"></script>
     <script src="./app/deleteUserAndMovie.js"></script>
+    <script src="./app/burger.js"></script>
 </body>
 
 </html>

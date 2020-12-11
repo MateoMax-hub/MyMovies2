@@ -14,10 +14,22 @@
     display: flex;
 }
 .cardDeBotones{
-    padding: 42% 4%;
+    padding: 21% 0%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     width: 300px;
-    color: white;
-    background-color: rgb(17, 15, 15);
+    background-color: rgb(51, 49, 49);
+}
+.cardCuadrado{
+    padding: 4%;
+}
+.BoottonX{
+    width: 300px;
+    background-color: rgb(51, 49, 49);
+}
+.padding{
+    padding: 8%;
 }
 .cardDeBotoness{
     display: none;
@@ -68,26 +80,12 @@ input[type=checkbox] {
 .DateFormCard{
     margin: 0px 24%;
 }
-th{
-    text-align: center;
-}
-td{
-    text-align: center;
-}
-li{
-    padding: 4%;
-}
-.cardCuadrado{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(116, 114, 114);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
 .cardCuadrado:hover{
-    background-color: rgb(182, 178, 178);
+    background-color: rgb(77, 20, 20);
+    border-radius: 1rem;
+}
+.cardDeBotones{
+    display: none;
 }
 @media screen and (max-width: 780px){
     .cardDeBotoness{
