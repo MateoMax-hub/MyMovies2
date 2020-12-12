@@ -11,6 +11,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/assets/css/admin.css">
     <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../src/assets/css/perfil.css">
     <link rel="stylesheet" href="../src/assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -24,34 +25,60 @@
 <body onresize="sidebarHeight()">
     <header>
         <div class="contenedor">
-            <h2 id="adminTrue"><a href="./index.html" class="logotipo" style="font-family: fantasy;">Mercado-Pelis</a>
+            <h2 id="adminTrue"><a href="../index.html" class="logotipo" style="font-family: fantasy;">Mercado-Pelis</a>
             </h2>
             <h2 id="adminFalse" class="logotipo d-none" style="font-family: fantasy;"> Mercado-Pelis</h2>
             <nav>
-                <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                <div class="HLDH">
+                    <div>
+                        <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal7">
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="./login.html">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <!-- Modal que muestra perfil -->
+
+
+    <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="bordes modal-content">
+                <div class="Datos modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="suName">
+                        <div class="susName">
+                            <div>
+                                <a>
+                                    <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-person-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="datosPerfil">
+                                <p id="suName"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal"><b>Cerrar</b></button>
+                    <button type="button" onclick="endSession()" id="dropdown01"
+                        class="btn btn-danger"><b>Salir</b></button>
+                </div>
+            </div>
         </div>
-    </nav> -->
+    </div>
 
     <section>
         <div class="cardDeBotoness">
@@ -62,40 +89,42 @@
         </div>
     </section>
     <div>
-        <form id="formButoon">
-            <div style="margin: 2%;">
-                <a id="buttonBurger" type="button" onclick="boton()">
-                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-plus-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                    </svg>
-                </a>
-            </div>
-        </form>
+        <div class="HDL">
+            <a id="buttonBurger" type="button" onclick="boton()">
+                <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-plus-square-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                </svg>
+            </a>
+        </div>
     </div>
     <main class="d-flex" id="sidebar">
         
         <section>
             <div>
-                <div id="buttonBurgerDe" >
-                    <a class="BoottonX"  type="button" onclick="voton()">
-                        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                <div id="buttonBurgerDe">
+                    <a class="BoottonX" type="button" onclick="voton()">
+                        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                         </svg>
                     </a>
                 </div>
-                <div id="burgerButon"  class="cardDeBotones">
+                <div id="burgerButon" class="cardDeBotones">
                     <a href="#" onclick="showAgregarPeliculaSect('true')" class="padding sidebar-text">
                         <div class="cardCuadrado">Agregar Película</div>
                     </a>
-    
+
                     <a href="#" onclick="showAgregarUsuariosSect('true')" class="padding sidebar-text">
                         <div class="cardCuadrado">Crear Usuario</div>
                     </a>
-    
+
                     <a href="#" onclick="showListaPeliculasSect('true')" class="padding sidebar-text">
                         <div class="cardCuadrado">Lista de películas</div>
                     </a>
-    
+
                     <a href="#" onclick="showListaUsersSect('true')" class="padding sidebar-text">
                         <div class="cardCuadrado">Lista de usuarios</div>
                     </a>
@@ -442,6 +471,7 @@
     <script src="./app/editUsers.js"></script>
     <script src="./app/deleteUserAndMovie.js"></script>
     <script src="./app/burger.js"></script>
+    <script src="./app/perfil.js"></script>
 </body>
 
 </html>

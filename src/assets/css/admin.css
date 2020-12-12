@@ -87,7 +87,18 @@ input[type=checkbox] {
 .cardDeBotones{
     display: none;
 }
+.HDL{
+    margin: 0px 2%;
+    padding: 0%;
+}
+.HLDH{
+    display: flex;
+    
+}
 @media screen and (max-width: 780px){
+    .HDL{
+        display: none;
+    }
     .cardDeBotoness{
         display: flex;
         padding: 2%;
