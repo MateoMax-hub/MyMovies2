@@ -37,23 +37,22 @@ function displayFilterMovie(movie) {
                 <div class="modal fade" id="filter${agregar.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class=" modal-dialog">
-                        <div class="modal-content">
-                            <div class="CardsModal card-body">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h5 class="card-title">${agregar.titulo}</h5>
-                                <br>
-                                <img src="${agregar.imagen}"class="card-img-top" alt="...">
-                                <br>
-                                <br>
-                                <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
-                                <p class="card-text"><b>Precio: </b>$${agregar.precio}</p>
+                        <div class="fondoDeCard modal-content">
+                            <div class="ofCard">
+                                <div class="CardsModal card-body">
+                                    <div>
+                                        <h5 class="card-title">${agregar.titulo}</h5>
+                                        <img src="${agregar.imagen}"class="cardImg" alt="...">
+                                    </div>
+                                    <div class="CardsM">
+                                        <p class="card-text"><b>Descripcion: </b>${agregar.descripcion}</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="CardsModal modal-body">
                                 <div style="display: flex; justify-content: space-between;">
                                     <!-- Button trigger modal -->  
-                                    <a href="#" class="btn btn-success">Alquilar</a>
+                                    <a href="#" class="btn btn-success"><b>$${agregar.precio}</b> Arg</a>
                                 </div>
                             </div>
                         </div>

@@ -9,134 +9,247 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/assets/css/admin.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../src/assets/css/perfil.css">
+    <link rel="stylesheet" href="../src/assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-    crossorigin="anonymous" />
-    <link rel="stylesheet" href="../src/assets/css/admin.css">
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX////tGyT86errABXsAADrCxftAAztAhTyiozyqqvtABDxmpv3wcPtFiDtEBv75ebwd3r309T89vb42NnuVVrwfYH1ubvsNj3vcHPtUljuWV7sPkT77u/sLDTykZT0u73zn6Lyg4brJSzsSE73zc7uY2bzpKb0srPsOT/tREn64ODvZmv519jxlZf2zs/2xcdhtPOQAAAHmElEQVR4nO2de3fiLBCHg2LSzZZo3bb2or1fbbv7/b/da+qlkTAwQxKPvuf3/LsH4UmAYYB0kwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOmvF451UOd1zd427rS5LXm93W19P3u63wU//ebYW9/m5r7Jl054ZGH++uuvFbkccansQV6/WVSSPLRnCaqVjDc339FFNuYahMMY2rVMxZqmINT1JT6OeIhpaGqnjbTcz4rVWs4WI0LcoO8l8RJRcFVXYVU6uU21IwznB8XZRlldEX0qJLQ5WeRVQr5ESbaMPLTK3IJz1Z0ZWh0ncR9cpqUkbFGpbjd03xMJfVuzJU+lZesYTxpFCxht/jd4NJ/0gKbwxN3m3MuFr3M7nh8ZbgoqlKsrTdGCoz6DJmjDb9TGz4mZptw0VHFcz9P4aquO4uZlT6mdRwqmxBpfqCub9iqLJLWd18ziv9TGi4jhPbaH6CUjXsLGZs9TOh4XNW0/tWZM82W4aqmzyjZ6r9TGZ4Zs0ya4prdu1bhp3EjEU+Ua1CZDg8zWrzzKqlL8yfsAy7yDNOt/uZdBy+vmuXo0mZ86JlqIwRLoqCVNcjEYYL/s2sn1j+DnOysQ1bzzN+2wMpZtV243iNRvEaWjNU2am8BTTntZkiauV9nNcVU95IrBu2GjNO6g8/Lj/806/9kJmxSjoMW4wZPcd6JDLHf6qPRc2aFV2GrcWMTT7RgmHyUuvvGWsj1GnYVp5x5VqPRO+1XdqPy0w4xZyGizyjjZgxck3y8Ybz2s+xlm5uw1byjFqcaGiYXNhtZc2mhGELMaMeJ5oa/rF/sfhglKIMG8eME2I92cAwmVg/aQaMQqRhw5gxNIRgE8O73G4jY1uCNmwUM6x8oiXDud1NNWOf32PYJM84deetDQ3HM6tjpK/hQh7DBnmGnU+0ZJg8Wz0jOwqX8RlG5xlEnGhueGR1jQFjj99rGHmeQcWJ5oavVt8oGO3zG6p0JG+GI59oy/Cf9ewKxi2EgGFEzHDlE1sP7SvGbcmJvfv9zmhPwFDpc1kjnPlEtVGqwZLXXtUYxo5b0FAaM5z5ROXnGqUtdkA0b+EyQUNhzHDnEz80Sz27MRTFjC/vNNp4+6CTXqok5xn+OBE3NVd5sg1bmEuXDWPmGYE40Twls08SC8YPsgyZnYvOJ1btmTRNq+3kgpMg8gxZMSMYJ4rGtxJHVmv7jM7FNOTEjFP/Txn9lyzKfbeP1jNM71ozZMSMYJygM50h8whiOrCGAedKHtcwOIi8+YTyn9pOmDdA7YlGacbFE7ZhYCIMxglPnvOsGWleiT0MlWYUchkS0r5gRsWJ9eza94TUe81JZEvs4xlOwHcZPtwTI4qOGUMinygeP77nhmJGd/EXzUrVk3p2yCtXNzQFuctCxQwqThg1Pusrf5woUz6m4Zv9GFl3fx2Gg2Q8I1pMxAwinyjziO+ho/+R9c/Lnscz/GUPdWM4d5ychuTqxBSumEHFifKVl4aeODF9KCtiGU5rh6ScPQzKkJw5XHkGFSe+h+3C0Bcn3geKa3g1sCvg7CWShskr0ex6zKDixHLqHfVzz9rxY7nO5Bg6Nig1aylEGZKZnp1nUG979ShGqSfBOVrVwTC8rzenz7suTBrSo2trJ4kasesl0EjRs8Fm6ggajq8cz5t3yO0xZMUMMk6YVXy4oA8xf7YGQ4bnD45FCCc3DBhyYgYVJzZ5BP0G5z+3K/yGx4/OgeBJVbiG5ErlJ88ge3J4lptWnp/H8PNmpp0PesDdjvcZ0jFjNcjIOMHIhh4rFQ/OekOL+fzz6dfRs9EZ8ZRz7n12r2EgZlD/6ssj1lxs7UeYvk2Wa51mBbktotk7535D8i2Vwe4v8YZ9ecSam0CyFYJ/vTRkmFyQeQZ1PuHLI9ZQb5+LZMsnZEjGjIF9HrspHh4g1NtnI/mgMGhIxQzqhCkNH60P6eHFFOTeD2YZBndBrcrDH5dNA7uO4TpEXxKHDYM72dLKa3meVFD25TLDUDAv+PKIH8PAtqMfw48TfMPgidKaAevT90aGhpcUSg3JmGGVfGB9OdXEMJ+JvlvjG4Z27JcFM17t8YaFPpOf7TANyZhRwbPf1Iqh0e8xH3MzDck8oyLIDVJxhoWeSEegzDC4DuHuzEcZmkxfCu+EyA0DMSN/ZlcpNDRFns6OZN/+xhl6Y4bk1jTP0JQM8lT3r77E82ekoZXTbZXx7DdxDE1Rw6iH2ePH13n8y4swTC6JmGFyyVOuG/brOX6vN23p+yuRIRUzZH8dpW7IPV2LQmSYzJ15hvCvFey1oTNmpMK/UrTfho6YkUtv2e65YS1myL+u2XdDK8+IuO2+94ZbMSPmi4X9N6zGDOkN4pL9N6zsTUVdFz0Aw801z7jroodguIoZ/bjrogdh+H3uEHtd9DAMF3nG5phXyoEYJpecL+OcHIrhNHZX4WAM44Fhy8CwA2DYMjDsABi2DAw7AIYtA8MOgGHLwLADYNgyMOwAGLYMDDsAhi3z/zcc6jodVlfyUq+xy/+RaXxcp8PqSoa3doW3ja51AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwCHzH1x0chebpfgjAAAAAElFTkSuQmCC">
     <title>admin</title>
 </head>
 
 <body onresize="sidebarHeight()">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="./login.html">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <header>
+        <div class="contenedor">
+            <h2 id="adminTrue"><a href="../index.html" class="logotipo" style="font-family: fantasy;">Mercado-Pelis</a>
+            </h2>
+            <h2 id="adminFalse" class="logotipo d-none" style="font-family: fantasy;"> Mercado-Pelis</h2>
+            <nav>
+                <div class="HLDH">
+                    <div>
+                        <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal7">
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <main class="d-flex" id="sidebar">
-        <div class="w-25 bg-my-light my-border h-100">
-            <ul class=" mt-5 ml-5">
-                <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="showAgregarPeliculaSect('true')" class="sidebar-text">Agregar Película</a>
-                </li>
-                <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="showAgregarUsuariosSect('true')" class="sidebar-text">Crear Usuario</a>
-                </li>
-            </ul>
-            <hr>
-            <ul class=" mt-5 ml-5">
-                
-                <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="showListaPeliculasSect('true')" class="sidebar-text">Lista de películas</a>
-                </li>
-                <li class="mt-4 sidebar-text">
-                    <a href="#" onclick="showListaUsersSect('true')" class="sidebar-text">Lista de usuarios</a>
-                </li>
-            </ul>
+    <!-- Modal que muestra perfil -->
+
+
+    <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="bordes modal-content">
+                <div class="Datos modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="suName">
+                        <div class="susName">
+                            <div>
+                                <a>
+                                    <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-person-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="datosPerfil">
+                                <p id="suName"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal"><b>Cerrar</b></button>
+                    <button type="button" onclick="endSessionn()" id="dropdown01" class="btn btn-danger"><b>Salir</b></button>
+                </div>
+            </div>
         </div>
-        <div class="w-75 h-100 d-none overflow-auto" id="agregarPeliculaSect">
-            <div class=" d-flex flex-column align-items-center sidebar-text">
+    </div>
+
+    <section>
+        <div class="cardDeBotoness">
+            <a href="#" onclick="showAgregarPeliculaSect('true')" class="hveCard sidebar-text">Agregar Película</a>
+            <a href="#" onclick="showAgregarUsuariosSect('true')" class="hveCard sidebar-text">Crear Usuario</a>
+            <a href="#" onclick="showListaPeliculasSect('true')" class="hveCard sidebar-text">Lista de películas</a>
+            <a href="#" onclick="showListaUsersSect('true')" class="hveCard sidebar-text">Lista de usuarios</a>
+        </div>
+    </section>
+    <div>
+        <div class="HDL">
+            <a id="buttonBurger" type="button" onclick="boton()">
+                <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-plus-square-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <main class="d-flex" id="sidebar">
+        
+        <section>
+            <div>
+                <div id="buttonBurgerDe">
+                    <a class="BoottonX" type="button" onclick="voton()">
+                        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </a>
+                </div>
+                <div id="burgerButon" class="cardDeBotones">
+                    <a href="#" onclick="showAgregarPeliculaSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Agregar Película</div>
+                    </a>
+
+                    <a href="#" onclick="showAgregarUsuariosSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Crear Usuario</div>
+                    </a>
+
+                    <a href="#" onclick="showListaPeliculasSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Lista de películas</div>
+                    </a>
+
+                    <a href="#" onclick="showListaUsersSect('true')" class="padding sidebar-text">
+                        <div class="cardCuadrado">Lista de usuarios</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-none" id="agregarPeliculaSect">
+            <div class="AgregarPeliCard">
                 <h3 class="my-5">Agrega Película</h3>
-                <form id="AgregarPeli" class="d-flex flex-column w-100 ">
-                    <div class=" form-group d-flex flex-column align-items-center">
-                        <label>Titulo de la pelicula</label>
-                        <input id="TituloPeli" type="text" required class="w-50">   
+                <form id="AgregarPeli">
+                    <div class="displayCard">
+                        <div class="input-group">
+                            <div style="display: flex;">
+                                <input type="text" id="TituloPeli" class="form-control w-100"
+                                    aria-label="Text input with checkbox" placeholder="Titulo">
+                            </div>
+                        </div>
+                        <div>
+                            <select class="form-control" id="categoriaPeli" required>
+                                <option value="" disabled selected>Categorias</option>
+                                <option>Nuevos Agregados</option>
+                                <option>Comedia</option>
+                                <option>Drama</option>
+                                <option>Terror</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class=" form-group d-flex flex-column align-items-center">
-                        <label>Descripcion de la pelicula</label>
-                        <textarea id="DescripcionPeli" cols="30" rows="10" required class="w-50"></textarea>
+                    <br>
+                    <div class="input-group" style="display: flex; flex-direction: column;">
+                        <div style="display: flex;">
+                            <textarea type="text" id="DescripcionPeli" cols="30" rows="10" class="form-control w-100"
+                                aria-label="Text input with checkbox"
+                                placeholder="Descripcion de pelicula..."></textarea>
+                        </div>
                     </div>
-                    <div class=" form-group d-flex flex-column align-items-center">
-                        <label>Precio de la pelicula</label>
-                        <input id="PrecioPeli" type="number" required   class="w-50">
+                    <br>
+                    <div class="displayCard">
+                        <div class="input-group">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="ImagenPeli"
+                                    placeholder="Ingrese el link de la imagen" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="number" class="form-control" id="PrecioPeli" placeholder="Precio" required
+                                    maxlength="20">
+                            </div>
+                        </div>
                     </div>
-                    <div class=" form-group d-flex flex-column align-items-center">
-                        <label>Imagen para la card de la pelicula</label>
-                        <input id="ImagenPeli" type="text" required class="w-50">
-                    </div>
-                    <div class=" form-group d-flex flex-column align-items-center">
-                        <select id="categoriaPeli" required>
-                            <option value="" disabled selected>Categorias</option>
-                            <option>Nuevos Agregados</option>
-                            <option>Comedia</option>
-                            <option>Drama</option>
-                            <option>Terror</option>
-                        </select>
-                    </div>
-                    <div class="form-group d-flex flex-column align-items-center">
-                        <button type="submit" class="btn btn-outline-success w-25">Agregar</button>
+                    <div>
+                        <button type="submit" class="btn btn-outline-success">Agregar</button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="w-75 h-100 overflow-auto d-none" id="agregarUsuariosSect">
-            <div class="d-flex h-100 w-100 justify-content-center align-items-center">
-                <div class="">
-                    <form class="" id="newUserForm">
-                        <h2 class=" text-center mb-5">Agregar Usuario</h2>
+
+
+        <div class="w-100 h-100 overflow-auto d-none" id="agregarUsuariosSect">
+            <div>
+                <div class="DateFormCard">
+                    <form id="newUserForm">
+                        <h2 class="text-center mb-5">Agregar Usuario</h2>
                         <div class="d-flex flex-row">
                             <div class="form-group d-flex flex-column mr-5">
                                 <label class="sidebar-text">Usuario</label>
-                                <input type="text" id="userNameInput" required>
+                                <div style="display: flex;">
+                                    <input type="text" id="userNameInput" class="form-control w-100"
+                                        aria-label="Text input with checkbox" placeholder="Titulo">
+                                </div>
                             </div>
                             <div class="form-group d-flex flex-column ml-5">
                                 <label class="sidebar-text">Email</label>
-                                <input type="text" id="userEmailInput" required>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="form-group d-flex flex-column mr-5 mt-4">
-                                <label class="sidebar-text">Contraseña</label>
-                                <input type="text" id="userPasswordInput" required>
-                            </div>
-                            <div class="form-group d-flex flex-column ml-5 mt-4">
-                                <label class="sidebar-text">¿Admin?</label>
-                                <input type="checkbox" class="mt-2 mr-auto ml-auto" id="userAdminInput" value="true" name="true">
+                                <div style="display: flex;">
+                                    <input type="text" id="userEmailInput" class="form-control w-100"
+                                        aria-label="Text input with checkbox" placeholder="Email">
+                                </div>
                             </div>
                         </div>
                         <div class="d-flex flex-row">
                             <div class="form-group d-flex flex-column mr-5 mt-4">
                                 <label class="sidebar-text">Id</label>
                                 <div class="d-flex flex-row align-items-center">
-                                    <input type="text" id="userIdInput" required>
-                                    <button class="btn btn-outline-dark random-button-button ml-1" onclick="randomId()" type="button"><i class="fas fa-dice random-button"></i></button>
+                                    <div style="display: flex;">
+                                        <input type="text" id="userIdInput" class="form-control w-100 m-1"
+                                            aria-label="Text input with checkbox">
+                                    </div>
+                                    <button class="btn btn-outline-dark" onclick="randomId()" type="button"><i
+                                            class="fas fa-dice random-button"></i></button>
                                 </div>
                             </div>
-                            <button class="btn btn-outline-success ml-5 mt-4 h-25 align-self-center" type="submit">Agregar usuario</button>
+                            <div class="form-group d-flex flex-column mr-5 mt-4">
+                                <label class="sidebar-text">Contraseña</label>
+                                <div style="display: flex;">
+                                    <input type="password" id="userPasswordInput" class="form-control w-100"
+                                        aria-label="Text input with checkbox" placeholder="Contraseña">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="form-group d-flex flex-column ml-5 mt-4">
+                                <label class="sidebar-text">¿Admin?</label>
+                                <input type="checkbox" class="mt-2 mr-auto ml-auto" id="userAdminInput" value="true"
+                                    name="true">
+                            </div>
+                            <button class="btn btn-outline-success ml-5 mt-4 h-25 align-self-center"
+                                type="submit">Agregar usuario</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div id="listaPeliculasSect" class="w-75 h-100 overflow-auto d-none">
+
+
+        <div id="listaPeliculasSect" class="w-100 h-100 overflow-auto d-none">
             <h2 class="my-5 text-center">Lista peliculas</h2>
             <div>
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
+                            <th scope="col" class="ElementsDePeliculas">Id</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Categoria</th>
@@ -148,14 +261,14 @@
                 </table>
             </div>
         </div>
-        <div id="listaUsersSect" class="w-75 h-100  overflow-auto">
+        <div id="listaUsersSect" class="w-100 h-100  overflow-auto">
             <h2 class="my-5 text-center">Lista Usuarios</h2>
             <div>
                 <table class="table table-striped">
                     <thead>
-                        <tr>
+                        <tr class="textAcerca">
                             <th scope="col">Nombre</th>
-                            <th scope="col">Email</th>
+                            <th class="ElementsDeUsuarios" scope="col">Email</th>
                             <th scope="col">Estado</th>
                             <th scope="col"></th>
                         </tr>
@@ -166,7 +279,7 @@
             </div>
         </div>
     </main>
-    
+
     <section id="modalsSect">
 
     </section>
@@ -185,17 +298,20 @@
                             <div class="form-group">
                                 <label class="ml-5 mpp-1"><b>Titulo:</b></label>
                                 <input type="text" id="titleEditInput">
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('title')"><i class="fas fa-redo-alt"></i></button>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoEdit('title')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                             <div class="form-group">
                                 <label class="ml-5 mpp-2"><b>Precio:</b></label>
                                 <input type="text" id="priceEditInput">
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('price')"><i class="fas fa-redo-alt"></i></button>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoEdit('price')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                             <div class="form-group">
                                 <label class="ml-5 mpp-3"><b>Imagen:</b></label>
                                 <input type="text" id="imageEditInput">
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('img')"><i class="fas fa-redo-alt"></i></button>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoEdit('img')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                             <div class="form-group">
                                 <label class="ml-5 mpp-4"><b>Categoria:</b></label>
@@ -206,12 +322,15 @@
                                     <option>Drama</option>
                                     <option>Terror</option>
                                 </select>
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoEdit('categorie')"><i class="fas fa-redo-alt"></i></button>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoEdit('categorie')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                             <div class="form-group d-flex">
                                 <label class="ml-5 mr-3"><b>Descripcion:</b></label>
-                                <textarea name="" id="descriptionEditInput" cols="25" rows="6" class="text-area-my"></textarea>
-                                <button type="button" class="btn btn-outline-primary redo-icon align-self-start ml-3" onclick="redoEdit('description')"><i class="fas fa-redo-alt"></i></button>
+                                <textarea name="" id="descriptionEditInput" cols="25" rows="6"
+                                    class="text-area-my"></textarea>
+                                <button type="button" class="btn btn-outline-primary redo-icon align-self-start ml-3"
+                                    onclick="redoEdit('description')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -228,7 +347,8 @@
     </section>
     <section id="usersEditModalsSect">
         <!-- Modal -->
-        <div class="modal fade" id="editUsersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editUsersModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -242,22 +362,27 @@
                             <div class="form-group">
                                 <label class="ml-5 mr-4"><b>Nombre:</b></label>
                                 <input type="text" id="nombreEditInput">
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('nombre')"><i class="fas fa-redo-alt"></i></button>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoUserEdit('nombre')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                             <div class="form-group">
                                 <label class="ml-5 mr-4 "><b>Email:</b></label>
                                 <input type="text" id="emailEditInput">
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('email')"><i class="fas fa-redo-alt"></i></button>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoUserEdit('email')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                             <div class="form-group">
                                 <label class="ml-5 mr-4 "><b>Contraseña:</b></label>
                                 <input type="text" id="contraseñaEditInput">
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('contra')"><i class="fas fa-redo-alt"></i></button>
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoUserEdit('contra')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                             <div class="form-group">
                                 <label class="ml-5 mr-4 "><b>¿Admin?:</b></label>
-                                <input type="checkbox" class="mt-2 mr-auto ml-auto" id="adminEditInput" value="true" name="true">
-                                <button type="button" class="btn btn-outline-primary redo-icon ml-3" onclick="redoUserEdit('admin')"><i class="fas fa-redo-alt"></i></button>
+                                <input type="checkbox" class="mt-2 mr-auto ml-auto" id="adminEditInput" value="true"
+                                    name="true">
+                                <button type="button" class="btn btn-outline-primary redo-icon ml-3"
+                                    onclick="redoUserEdit('admin')"><i class="fas fa-redo-alt"></i></button>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -269,6 +394,66 @@
             </div>
         </div>
     </section>
+    <!-- Footer -->
+
+    <footer>
+        <div class="container-all-footer">
+            <div class="container-body">
+                <div class="column1">
+                    <h1>Información sobre nosotros</h1>
+                    <p>Este es un proyecto que salio gracias a un desafio de Rolling Code Scohol, Este proyecto consiste
+                        en una pagina para poder subir peliculas y bajar peliculas de las paginas de maneta
+                        independiente si sos usuario pero solo el administrador puede determinar si la pelicula se queda
+                        o no.</p>
+                </div>
+                <div class="column2">
+                    <h1>Nuestras Redes</h1>
+                    <div class="row">
+                        <a href="https://www.facebook.com/"></a>
+                        <i class="fab fa-facebook"></i><label>Seguinos en FB</label>
+                        </a>
+                    </div>
+
+                    <div class=" row">
+                        <a href="https://mobile.twitter.com/?lang=es">
+                            <i class="fab fa-twitter"></i><label>Seguinos en TW</label>
+                        </a>
+                    </div>
+
+                    <div class=" row">
+                        <a href="https://www.instagram.com/?hl=es-la">
+                            <i class="fab fa-instagram"></i><label>Seguinos en IG</label>
+                        </a>
+                    </div>
+                </div>
+                <div class=" column3">
+                    <h1>Contactos</h1>
+                    <div class="row2">
+                        <i class="fas fa-home"></i><label>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</label>
+                    </div>
+
+                    <div class="row2">
+                        <i class="fas fa-mobile-alt"></i><label>381-381-3813.</label>
+                    </div>
+
+                    <div class="row2">
+                        <i class="fas fa-envelope"></i><label>elvideoclub@demateo.com</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="information">
+                    <a href="">Información Compañía</a>
+                    <a href=""> Privación y Politica</a>
+                    <a href="">Terminos y condiciones</a>
+                </div>
+            </div>
+
+    </footer>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -284,7 +469,10 @@
     <script src="./app/editPeliculas.js"></script>
     <script src="./app/datos.js"></script>
     <script src="./app/editUsers.js"></script>
+    <script src="./app/endSession.js"></script>
     <script src="./app/deleteUserAndMovie.js"></script>
+    <script src="./app/burger.js"></script>
+    <script src="./app/perfil.js"></script>
 </body>
 
 </html>

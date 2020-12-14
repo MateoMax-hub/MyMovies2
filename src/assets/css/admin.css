@@ -6,10 +6,39 @@
     border-style: solid;
     border-width: 0px 1px 0px 0px;
 }
+.AgregarPeliCard{
+    margin: 0% 20%;
+    width: 60%;
+}
+.displayCard{
+    display: flex;
+}
+.cardDeBotones{
+    padding: 21% 0%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 300px;
+    background-color: rgb(51, 49, 49);
+}
+.cardCuadrado{
+    padding: 4%;
+}
+.BoottonX{
+    width: 300px;
+    background-color: rgb(51, 49, 49);
+}
+.padding{
+    padding: 8%;
+}
+.cardDeBotoness{
+    display: none;
+}
 .sidebar-text {
     font-size: 22px;
     color: black;
 }
+
 .h-33 {
     height: 33%;
 }
@@ -47,4 +76,49 @@ input[type=checkbox] {
 }
 .redo-icon {
     font-size: 13px;
+}
+.DateFormCard{
+    margin: 0px 24%;
+}
+.cardCuadrado:hover{
+    background-color: rgb(77, 20, 20);
+    border-radius: 1rem;
+}
+.cardDeBotones{
+    display: none;
+}
+.HDL{
+    margin: 0px 2%;
+    padding: 0%;
+}
+.HLDH{
+    display: flex;
+    
+}
+@media screen and (max-width: 780px){
+    .HDL{
+        display: none;
+    }
+    .cardDeBotoness{
+        display: flex;
+        padding: 2%;
+        font-size: 2em;
+        background-color: rgb(51, 18, 13);
+    }
+    .cardDeBotones{
+        display: none;
+    }
+    .hveCard{
+        padding: 1%;
+        font-family: fantasy;
+    }
+    .hveCard:hover{
+        background-color: rgb(32, 14, 14);
+    }
+    .ElementsDePeliculas{
+        display: none;
+    }
+    .ElementsDeUsuarios{
+        display: none;
+    }
 }
