@@ -157,4 +157,20 @@ html, body {
     margin-top: auto;
 }
 /* -------------------------------------------------------------------------------------  */
+.my-font {
+    font-size: 15px;
+}
+.my-font2 {
+    font-size: 12px;
 
+}
+.h-carrito {
+    height: 160px;
+}
+.hr-my {
+    padding: 0;
+    margin: 0
+}
+.input-sm {
+    width: 100px;
+}

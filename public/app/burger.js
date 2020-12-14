@@ -8,10 +8,10 @@ buttonBurgerDe.style.display = "none";
 function boton() {
     burgerButon.style.display = "block";
     buttonBurgerDe.style.display = "block";
-    buttonBurger.style.display = "none";
+    buttonBurger.classList = 'd-none'
 }
 function voton() {
     burgerButon.style.display = "none";
-    buttonBurger.style.display = "block";
+    buttonBurger.classList = ''
     buttonBurgerDe.style.display = "none";
 }

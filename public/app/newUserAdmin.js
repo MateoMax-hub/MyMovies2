@@ -31,8 +31,8 @@ newUserForm.onsubmit= (e) =>{
         password: password,
         id: id,
         admin: admin,
-        enCarrito: '',
-        enAlquiler: '',
+        enCarrito: [],
+        enAlquiler: [],
         estado: 'habilitada'
     })
 

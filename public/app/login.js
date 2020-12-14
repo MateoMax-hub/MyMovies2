@@ -9,8 +9,8 @@ const userAdminDefault = {
     password: "123admin",
     id: "_111111111",
     admin: true,
-    enCarrito: '',
-    enAlquiler: '',
+    enCarrito: [],
+    enAlquiler: [],
     estado: 'habilitada'
 }
 usersRegister.push(userAdminDefault)
