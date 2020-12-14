@@ -11,7 +11,7 @@ function displayUsersTable (users) {
         const td = `
             <tr>
                 <th scope="row">${element.usuario}</th>
-                <td>${element.email}</td>
+                <td class="ElementsDeUsuarios" >${element.email}</td>
                 <td>${element.estado}</td>
                 <td>
                     <button class="btn btn-danger"  onclick="deleteUser('${element.id}')"><i class="fas fa-trash-alt"></i></button>

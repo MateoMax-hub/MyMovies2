@@ -9,8 +9,8 @@ function displayMoviesTable (movies) {
     for (let i = 0; i < movies.length; i++) {
         const element = movies[i];
         const td = `
-            <tr>
-                <th scope="row">${element.id}</th>
+            <tr >
+                <th scope="row" class="ElementsDePeliculas">${element.id}</th>
                 <td>${element.titulo}</td>
                 <td>${element.precio}</td>
                 <td>${element.categoria}</td>
