@@ -2,47 +2,50 @@ const listaTBody = document.getElementById('listaTBody')
 const modalsSect = document.getElementById('modalsSect')
 
 
-function displayMoviesTable (movies) {
+
+function getMovies() {
+    const sesion = userSesion()
+    const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
     const tr = []
     const modals = []
-
-    for (let i = 0; i < movies.length; i++) {
-        const element = movies[i];
+    for (let i = 0; i < sesion.enAlquiler.length; i++) {
+        const element = sesion.enAlquiler[i];
+        const userMovies = userUI.filter((i) => i.id == element.id)
+        const movie = userMovies[0]
+        
         const td = `
-            <tr>
-                <th scope="row">${element.id}</th>
-                <td>${element.titulo}</td>
-                <td>${element.precio}</td>
-                <td>${element.categoria}</td>
+            <tr class="tr1">
+                <th scope="row">${movie.id}</th>
+                <td>${movie.titulo}</td>
+                <td>${movie.categoria}</td>
+                <td>${movie.id}</td>
                 <td>
-                    <button class="btn btn-danger"  onclick="deleteMovie('${element.id}')"><i class="fas fa-trash-alt"></i></button>
-                    <button class="btn btn-outline-warning"  onclick="editMovie('${element.id}')"><i class="fas fa-edit"></i></button>
-                    <button class="btn btn-outline-dark" data-toggle="modal" data-target="#modalOf${element.id}">más info</button>
+                    <button class="btn btn-outline-danger" data-toggle="modal" data-target="#modalOf${movie.id}">más info</button>
                 </td>
             </tr>
         `
+        
         const modal = `
             <!-- Modal -->
-            <div class="modal fade" id="modalOf${element.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modalOf${movie.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">${element.titulo}</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">${movie.titulo}</h5>
                             <button type="button" class="btn-close btn" data-dismiss="modal" aria-label="Close">
                                 <b><span aria-hidden="true">&times;</span></b>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <b>Precio:</b>${element.precio}
-                            <br>
-                            <b>Categorias:</b>${element.categoria}
+                            
+                            
+                            <b>Categorias:</b>${movie.categoria}
                             <br>
                             <div>
-                                <b>Descripción:</b>${element.descripcion}
+                                <b>Descripción:</b>${movie.descripcion}
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-outline-warning" onclick="editMovie('${element.id}')"><i class="fas fa-edit"></i></button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -51,16 +54,10 @@ function displayMoviesTable (movies) {
         `
         tr.push(td)
         modals.push(modal)
+    
+        
     }
-    moviesTBody.innerHTML = tr.join('')
+    listaTBody.innerHTML = tr.join('')
     modalsSect.innerHTML = modals.join('')
 }
-
-function displayUserMovies() {
-    const users = JSON.parse(localStorage.getItem('usersRegister')) || [];
-    const usersesion = JSON.parse(localStorage.getItem('sesion')) || [];
-    const filterUserSesion = users.find((u) => u.id == usersesion.id)
-    
-
-}
-displayUserMovies()
+getMovies()

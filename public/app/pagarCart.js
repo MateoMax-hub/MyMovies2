@@ -1,4 +1,3 @@
-$('#buyModal').modal('show')
 
 function ponerDatos() {
     $('#modalCarrito').modal('hide')
