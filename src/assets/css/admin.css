@@ -115,4 +115,10 @@ input[type=checkbox] {
     .hveCard:hover{
         background-color: rgb(32, 14, 14);
     }
+    .ElementsDePeliculas{
+        display: none;
+    }
+    .ElementsDeUsuarios{
+        display: none;
+    }
 }
