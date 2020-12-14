@@ -54,6 +54,9 @@
                 <li class="mt-4 sidebar-text">
                     <a href="#" onclick="showListaUsersSect('true')" class="sidebar-text">Lista de usuarios</a>
                 </li>
+                <li class="mt-4 sidebar-text">
+                    <a href="#" onclick="showListaProductsSect('true')" class="sidebar-text">Lista de productos en consumo</a>
+                </li>
             </ul>
         </div>
         <div class="w-75 h-100 d-none overflow-auto" id="agregarPeliculaSect">
@@ -148,7 +151,7 @@
                 </table>
             </div>
         </div>
-        <div id="listaUsersSect" class="w-75 h-100  overflow-auto">
+        <div id="listaUsersSect" class="w-75 h-100  overflow-auto d-none">
             <h2 class="my-5 text-center">Lista Usuarios</h2>
             <div>
                 <table class="table table-striped">
@@ -161,6 +164,23 @@
                         </tr>
                     </thead>
                     <tbody id="usersTBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="listaProductsSect" class="w-75 h-100  overflow-auto d-none">
+            <h2 class="my-5 text-center">Lista películas alquiladas</h2>
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTBody">
                     </tbody>
                 </table>
             </div>

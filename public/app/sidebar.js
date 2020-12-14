@@ -20,6 +20,7 @@ function showAgregarPeliculaSect(hideOrShow) {
         agregarPeliculaSect.classList = 'w-75 h-100 overflow-auto'
         showAgregarUsuariosSect(false)  
         showListaPeliculasSect(false)
+        showListaProductsSect(false)
         showListaUsersSect(false)
     } else {
         agregarPeliculaSect.classList = 'd-none'
@@ -34,6 +35,7 @@ function showAgregarUsuariosSect(hideOrShow) {
         showListaPeliculasSect(false)
         showAgregarPeliculaSect(false)
         showListaUsersSect(false)
+        showListaProductsSect(false)
 
     } else {
         agregarUsuariosSect.classList = 'd-none'
@@ -47,6 +49,7 @@ function showListaPeliculasSect(hideOrShow) {
         showAgregarUsuariosSect(false)  
         showAgregarPeliculaSect(false)
         showListaUsersSect(false)
+        showListaProductsSect(false)
 
     } else {
         listaPeliculasSect.classList = 'd-none'
@@ -61,7 +64,22 @@ function showListaUsersSect(hideOrShow) {
         showAgregarUsuariosSect(false)  
         showListaPeliculasSect(false)
         showAgregarPeliculaSect(false)
+        showListaProductsSect(false)
     } else {
         listaUsersSect.classList = 'd-none'
+    }
+}
+
+
+function showListaProductsSect(hideOrShow) {
+    const listaProductsSect = document.getElementById('listaProductsSect')
+    if (hideOrShow) {
+        listaProductsSect.classList = 'w-75 h-100 overflow-auto'
+        showAgregarUsuariosSect(false)  
+        showListaPeliculasSect(false)
+        showAgregarPeliculaSect(false)
+        showListaUsersSect(false)
+    } else {
+        listaProductsSect.classList = 'd-none'
     }
 }
