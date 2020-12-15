@@ -8,3 +8,6 @@ if (userInSesion.admin) {
 } else {
     adminFalse.classList = 'logotipo'
 }
+if (userInSesion.estado == 'suspendido') {
+    $('#suspendedModal').modal('show')
+}
