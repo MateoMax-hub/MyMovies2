@@ -1,8 +1,8 @@
 const productsInfoModalsSect = document.getElementById('productsInfoModalsSect');
 const productsTBody = document.getElementById('productsTBody');
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 function displayProducts(movies) {
-    console.log(movies);
     const tr = []
     const modals = []
     for (let i = 0; i < movies.length; i++) {
@@ -10,11 +10,12 @@ function displayProducts(movies) {
         
         const th = `
             <tr class="tr1">
-                <th scope="row">a</th>
+                <th scope="row">${new Date(element.fecha).toLocaleDateString('es-ES', options)}</th>
                 <td>${element.title}</td>
                 <td>${element.userName}</td>
-                <td>b</td>
+                <td>${new Date(element.expira).toLocaleDateString('es-ES', options)}</td>
                 <td>
+                    <button class="btn btn-danger"  onclick="deleteProduct('${element.idMovie}','${element.userId}')"><i class="fas fa-trash-alt"></i></button>
                     <button class="btn btn-outline-danger" data-toggle="modal" data-target="#modalOfProduct${element.idMovie}by${element.userId}">más info</button>
                 </td>
             </tr>
@@ -31,9 +32,9 @@ function displayProducts(movies) {
                             </button>
                         </div>
                         <div class="modal-body">
-                            <b>Fecha de la compra:</b>a
+                            <b>Fecha de la compra:</b> ${new Date(element.fecha).toLocaleDateString('es-ES', options)}
                             <br>
-                            <b>Fecha de expiracion:</b>b
+                            <b>Fecha de expiracion:</b> ${new Date(element.expira).toLocaleDateString('es-ES', options)}
                             <br>
                             <b>Nombre de propietario:</b>${element.userName}
                             <br>
@@ -69,6 +70,8 @@ function filtrarPeliculas() {
             const movieTitle = userUI.filter((m) => m.id == alquilada.id)
             
             const movie = {
+                expira: alquilada.fechaExpiracion,
+                fecha: alquilada.fecha,
                 userName: userName,
                 idMovie: alquilada.id,
                 userId: userId,
@@ -81,3 +84,5 @@ function filtrarPeliculas() {
     displayProducts(movies)
 }
 filtrarPeliculas()
+
+

@@ -1,5 +1,6 @@
 const listaTBody = document.getElementById('listaTBody')
 const modalsSect = document.getElementById('modalsSect')
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 
 
@@ -15,10 +16,10 @@ function getMovies() {
         
         const td = `
             <tr class="tr1">
-                <th scope="row">${movie.id}</th>
+                <th scope="row">${new Date(element.fecha).toLocaleDateString('es-ES', options)}</th>
                 <td>${movie.titulo}</td>
                 <td>${movie.categoria}</td>
-                <td>${movie.id}</td>
+                <td>${new Date(element.fechaExpiracion).toLocaleDateString('es-ES', options)}</td>
                 <td>
                     <button class="btn btn-outline-danger" data-toggle="modal" data-target="#modalOf${movie.id}">más info</button>
                 </td>
@@ -46,6 +47,7 @@ function getMovies() {
                             </div>
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" onclick="window.location = 'https://www.netflix.com/browse'">Ver película</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>

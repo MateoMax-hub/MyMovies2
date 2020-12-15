@@ -45,7 +45,11 @@ function addToCart(id) {
     if (noRepetidoCart) {
         alert('la pelicula ya se encuentra en el carrito')
     } else {
-        const pid = {id:id}
+        const pid = {
+            id: id,
+            fecha: '',
+            fechaExpiracion: ''
+        }
         user.enCarrito.push(pid)
         const users = JSON.parse(localStorage.getItem('usersRegister')) || [];
         const usersAfterPush = users.map((m) => {
