@@ -96,5 +96,12 @@ function redoUserEdit(i) {
         } else {
             adminEditInput.removeAttribute('checked')
         }
+    } if (i == "suspended") {
+        if (estado == 'suspendido') {
+            suspendedEditInput.setAttribute ('checked','')
+        } else {
+            suspendedEditInput.removeAttribute('checked')
+
+        }
     }
 }
