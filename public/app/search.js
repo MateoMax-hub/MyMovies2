@@ -65,3 +65,9 @@ function displayFilterMovie(movie) {
     console.log(movie);
     Mostrar.innerHTML = rowMostrar.join('')
 }
+
+function resetSearch() {
+    AllPelis.classList = 'd-block'
+    MostrarPelisSect.classList = 'd-none';
+    SearchForm.reset()
+}

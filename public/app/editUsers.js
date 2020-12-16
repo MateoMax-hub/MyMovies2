@@ -4,6 +4,7 @@ const nombreEditInput = document.getElementById('nombreEditInput')
 const emailEditInput = document.getElementById('emailEditInput')
 const contraseñaEditInput = document.getElementById('contraseñaEditInput')
 const adminEditInput = document.getElementById('adminEditInput')
+const suspendedEditInput = document.getElementById('suspendedEditInput')
 let idUserEditing = ''
 
 function editUser(id) {
@@ -15,6 +16,13 @@ function editUser(id) {
     const email = editingUser[0].email
     const contraseña = editingUser[0].password
     const admin = editingUser[0].admin
+    const suspended = editingUser[0].estado
+
+    if (suspended == 'suspendido') {
+        suspendedEditInput.setAttribute ('checked','')
+    } else {
+        suspendedEditInput.removeAttribute('checked')
+    }
 
     if (admin) {
         adminEditInput.setAttribute ('checked','')
@@ -28,11 +36,17 @@ function editUser(id) {
 
 editUsersForm.onsubmit = (e) => {
     e.preventDefault()
+    let estado = ''
     let admin
     if (adminEditInput.checked) {
         admin = true
     } else {
         admin = false
+    }
+    if (suspendedEditInput.checked) {
+        estado = 'suspendido'
+    } else {
+        estado = 'habilitada'
     }
     const usuario = nombreEditInput.value
     const email = emailEditInput.value
@@ -45,7 +59,8 @@ editUsersForm.onsubmit = (e) => {
                 usuario,
                 email,
                 password,
-                admin
+                admin,
+                estado,
             }
             return user
         } else {
@@ -80,6 +95,13 @@ function redoUserEdit(i) {
             adminEditInput.setAttribute ('checked','')
         } else {
             adminEditInput.removeAttribute('checked')
+        }
+    } if (i == "suspended") {
+        if (estado == 'suspendido') {
+            suspendedEditInput.setAttribute ('checked','')
+        } else {
+            suspendedEditInput.removeAttribute('checked')
+
         }
     }
 }
