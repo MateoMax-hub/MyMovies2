@@ -1,5 +1,6 @@
 const carritoUl = document.getElementById('carritoUl')
 const priceCart = document.getElementById('priceCart')
+const Proyeccion = document.getElementById('Proyeccion')
 
 
 
@@ -44,6 +45,7 @@ function addToCart(id) {
     const noRepetidoCart = user.enCarrito.find((i) => i.id == id)
     if (noRepetidoCart) {
         alert('la pelicula ya se encuentra en el carrito')
+        
     } else {
         const pid = {id:id}
         user.enCarrito.push(pid)
@@ -63,6 +65,7 @@ function addToCart(id) {
         localStorage.setItem('usersRegister',usersAfterPushJSON)
         localStorage.setItem('sesion',userJSON)
     }
+    
     displayAllCarrito()
-
+    
 }  

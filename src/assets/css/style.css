@@ -94,6 +94,7 @@ html, body {
 }
 .MostrarPeli{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .suName{
@@ -105,6 +106,9 @@ html, body {
 }
 .InicioDatos{
     margin: 3% 0%;
+}
+#resetDate{
+    display: none;
 }
 @media screen and (max-width: 750px){
     .bd-placeholder-img-lg {

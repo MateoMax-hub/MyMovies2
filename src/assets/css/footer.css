@@ -7,9 +7,7 @@
 
 footer {
     width: 100%;
-    background: #0a000a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6f0000ad, #0a000a);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6f0000ad, #0a000a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #181718;
     color: white;
     margin-top: auto;
     bottom: 0;
@@ -41,7 +39,7 @@ body {
 }
 .column1 p{
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
     color: whitesmoke;
 }
 
@@ -53,7 +51,7 @@ body {
     font-size: 22px;
 }
 .column2 .row{
-    margin-top:20px;
+    margin-top: 10px;
     display: flex;
 }
 
@@ -61,17 +59,18 @@ body {
     margin-top: 10px;
     margin-left: 5px;
     color: gray;
+    font-size: 18px;
 }
 
 .column3{
-    margin-right: 5px;
+    margin-right: 45px;
     max-width: 400px;
 
 }
 
 .column3 h1{
     font-size: 22px;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .row2{
     margin-top: 20px;
