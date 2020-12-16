@@ -15,7 +15,7 @@ function getMovies() {
         
         const td = `
             <tr class="tr1">
-                <th scope="row">${movie.id}</th>
+                <th scope="row" class="CompraFecha">${movie.id}</th>
                 <td>${movie.titulo}</td>
                 <td>${movie.categoria}</td>
                 <td>${movie.id}</td>

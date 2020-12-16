@@ -78,7 +78,16 @@ input[type=checkbox] {
     font-size: 13px;
 }
 .DateFormCard{
+    display: flex;
+    justify-content: center;
     margin: 0px 24%;
+}
+.DateFormCardOne{
+    display: flex;
+    justify-content: space-between;
+}
+.DateFormCardOnes{
+    display: flex;
 }
 .cardCuadrado:hover{
     background-color: rgb(77, 20, 20);
@@ -95,10 +104,18 @@ input[type=checkbox] {
     display: flex;
     
 }
+.suName{
+    display: flex;
+    flex-direction: column;
+}
+.aDatos{
+    display: none;
+}
+.InicioDatos{
+    margin: 2% 0px;
+}
+
 @media screen and (max-width: 780px){
-    .HDL{
-        display: none;
-    }
     .cardDeBotoness{
         display: flex;
         padding: 2%;
@@ -119,6 +136,20 @@ input[type=checkbox] {
         display: none;
     }
     .ElementsDeUsuarios{
+        display: none;
+    }
+    .AgregarPeliCard{
+        margin: 0% 4%;
+        width: 90%;
+    }
+    .DateFormCard{
+        margin: 0px 4%;
+    }
+    .aDatos{
+        display: flex;
+        justify-content: space-around;
+    }
+    .InicioDatos{
         display: none;
     }
 }

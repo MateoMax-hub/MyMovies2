@@ -6,8 +6,18 @@
 }
 
 .trhead {
-    background-color: #e02626;
+    background-color: #e02626a1;
 }
 .table-dark.table-striped tbody tr:nth-of-type(odd) {
     background-color: rgb(0 0 0 / 28%);
+}
+@media screen and (max-width: 780px){
+    #listaDePeliculasUser{
+        margin: 0%;
+        padding: 0%;
+        font-size: 13px;
+    }
+    .CompraFecha{
+        display: none;
+    }
 }

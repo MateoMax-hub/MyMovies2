@@ -96,6 +96,16 @@ html, body {
     display: flex;
     flex-wrap: wrap;
 }
+.suName{
+    display: flex;
+    flex-direction: column;
+}
+.aDatos{
+    display: none;
+}
+.InicioDatos{
+    margin: 3% 0%;
+}
 @media screen and (max-width: 750px){
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
@@ -150,6 +160,14 @@ html, body {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .InicioDatos{
+        display: none;
+    }
+    .aDatos{
+        display: block;
+        display: flex;
+        justify-content: space-around;
     }
 }
 

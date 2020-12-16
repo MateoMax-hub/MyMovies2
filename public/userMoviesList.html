@@ -16,20 +16,24 @@
     <link rel="stylesheet" href="../src/assets/css/perfil.css">
     <link rel="stylesheet" href="../src/assets/css/listaPelisUsers.css">
     <link rel="stylesheet" href="../estilos.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title>Index</title>
 </head>
+
 <body class="mx-body">
     <header>
         <div class="contenedor">
             <h2 id="adminTrue" class="d-none"><a href="./admin.html" class="logotipo"
                     style="font-family: fantasy;">Mercado-Pelis</a> </h2>
             <h2 id="adminFalse" class="logotipo d-none" style="font-family: fantasy;"> Mercado-Pelis</h2>
-            <nav>
-                <a href="../index.html" class="activo">Inicio</a>
-                <a href="../index.html/#subirCard">Películas</a>
-                <a href="./userMoviesList.html">Mi lista</a>
-                <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal7">
+            <nav style="display: flex;">
+                <div class="InicioDatos">
+                    <a href="../index.html" class="activo">Inicio</a>
+                    <a href="../index.html/#subirCard">Películas</a>
+                    <a href="./userMoviesList.html">Mi lista</a>
+                </div>
+                <a type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal7">
                     <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -44,7 +48,7 @@
         <table class="table table-dark table-striped">
             <thead>
                 <tr class="trhead">
-                    <th scope="col">Fecha de la compra</th>
+                    <th scope="col" class="CompraFecha">Fecha de la compra</th>
                     <th scope="col">Nombre de pelicula</th>
                     <th scope="col">Genero</th>
                     <th scope="col">Fecha de expiracion</th>
@@ -52,29 +56,28 @@
                 </tr>
             </thead>
             <tbody id="listaTBody">
-                
-
             </tbody>
         </table>
     </section>
 
 
-
-
     <!-- Footer -->
 
-    <footer class="footer-espacing">
+    <footer class=>
         <div class="container-all-footer">
             <div class="container-body">
                 <div class="column1">
                     <h1>Información sobre nosotros</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.!</p>
+                    <p>Este es un proyecto que salio gracias a un desafio de Rolling Code Scohol, Este proyecto consiste
+                        en una pagina para poder subir peliculas y bajar peliculas de las paginas de maneta
+                        independiente si sos usuario pero solo el administrador puede determinar si la pelicula se queda
+                        o no.</p>
                 </div>
                 <div class="column2">
                     <h1>Nuestras Redes</h1>
                     <div class="row">
-                        <a href="https://www.facebook.com/"></a>
-                        <i class="fab fa-facebook"></i><label>Seguinos en FB</label>
+                        <a href="https://www.facebook.com">
+                            <i class="fab fa-facebook"></i><label>Seguinos en FB</label>
                         </a>
                     </div>
 
@@ -93,8 +96,7 @@
                 <div class=" column3">
                     <h1>Contactos</h1>
                     <div class="row2">
-                        <i class="fas fa-home"></i><label>Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.</label>
+                        <i class="fas fa-home"></i><label>Encontra nuestras oficinas en calle inventanda 1234.</label>
                     </div>
 
                     <div class="row2">
@@ -111,30 +113,29 @@
         <div class="container-footer">
             <div class="footer">
                 <div class="information">
-                    <a href="">Información Compañía</a>
-                    <a href=""> Privación y Politica</a>
-                    <a href="">Terminos y condiciones</a>
+                    <a href="" id="IC">Información Compañía</a>
+                    <a href="" id="PP"> Privación y Politica</a>
+                    <a href="" id="TC">Terminos y condiciones</a>
                 </div>
             </div>
 
     </footer>
-    
-    <!-- modal del perfil  -->
-    <section>
-    
-        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+
+    <!-- Modal que muestra perfil -->
+
+
+    <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="bordes modal-content">
                 <div class="Datos modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                     <div class="suName">
                         <div class="susName">
                             <div>
                                 <a>
-                                    <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-person-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                                     </svg>
                                 </a>
                             </div>
@@ -142,27 +143,32 @@
                                 <p id="suName"></p>
                             </div>
                         </div>
+                        <div class="aDatos">
+                            <a href="#" class="activo">Inicio</a>
+                            <a href="#subirCard">Películas</a>
+                            <a href="./public/userMoviesList.html">Mi lista</a>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal"><b>Cerrar</b></button>
-                    <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-danger"><b>Salir</b></button>
+                    <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-outline-primary"> <a
+                            href="/public/login.html"><b>Cerrar Sesión</b></button></a>
                 </div>
             </div>
         </div>
     </div>
-    
+
     </section>
     <section id="modalsSect">
 
     </section>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
     <script src="./app/ifAdmin.js"></script>
     <script src="./app/perfil.js"></script>
     <script src="./app/sesion.js"></script>

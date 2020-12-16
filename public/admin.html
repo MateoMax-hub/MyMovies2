@@ -30,10 +30,15 @@
             <h2 id="adminTrue"><a href="../index.html" class="logotipo" style="font-family: fantasy;">Mercado-Pelis</a>
             </h2>
             <h2 id="adminFalse" class="logotipo d-none" style="font-family: fantasy;"> Mercado-Pelis</h2>
-            <nav>
+            <nav style="display: flex;">
+                <div class="InicioDatos">
+                    <a href="../index.html" class="activo">Inicio</a>
+                    <a href="../index.html/#subirCard">Películas</a>
+                    <a href="./userMoviesList.html">Mi lista</a>
+                </div>
                 <div class="HLDH">
                     <div>
-                        <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal7">
+                        <a type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal7">
                             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -153,18 +158,54 @@
             </div>
         </div>
 
+     <!-- Modal que muestra perfil -->
+
+
+     <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="bordes modal-content">
+                <div class="Datos modal-body">
+                    <div class="suName">
+                        <div class="susName">
+                            <div>
+                                <a>
+                                    <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-person-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="datosPerfil">
+                                <p id="suName"></p>
+                            </div>
+                        </div>
+                        <div class="aDatos">
+                            <a href="../index.html" class="activo">Inicio</a>
+                            <a href="#subirCard">Películas</a>
+                            <a href="./public/userMoviesList.html">Mi lista</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-outline-primary"> <a
+                            href="/public/login.html"><b>Cerrar Sesión</b></button></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div class="w-100 h-100 overflow-auto d-none" id="agregarUsuariosSect">
             <div>
                 <div class="DateFormCard">
                     <form id="newUserForm">
                         <h2 class="text-center mb-5">Agregar Usuario</h2>
-                        <div class="d-flex flex-row">
-                            <div class="form-group d-flex flex-column mr-5">
+                        <div class="DateFormCardOne">
+                            <div class="form-group d-flex flex-column">
                                 <label class="sidebar-text">Usuario</label>
                                 <div style="display: flex;">
                                     <input type="text" id="userNameInput" class="form-control w-100"
-                                        aria-label="Text input with checkbox" placeholder="Titulo">
+                                        aria-label="Text input with checkbox" placeholder="Titulo" minlength="5" maxlength="20">
                                 </div>
                             </div>
                             <div class="form-group d-flex flex-column ml-5">
@@ -175,23 +216,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-row">
+                        <div class="DateFormCardOnes">
                             <div class="form-group d-flex flex-column mr-5 mt-4">
                                 <label class="sidebar-text">Id</label>
                                 <div class="d-flex flex-row align-items-center">
                                     <div style="display: flex;">
-                                        <input type="text" id="userIdInput" class="form-control w-100 m-1"
-                                            aria-label="Text input with checkbox">
+                                        <input type="text" id="userIdInput" class="form-control ml-1"
+                                            aria-label="Text input with checkbox" minlength="5">
                                     </div>
                                     <button class="btn btn-outline-dark" onclick="randomId()" type="button"><i
                                             class="fas fa-dice random-button"></i></button>
                                 </div>
                             </div>
-                            <div class="form-group d-flex flex-column mr-5 mt-4">
+                            <div class="form-group d-flex flex-column mt-4">
                                 <label class="sidebar-text">Contraseña</label>
                                 <div style="display: flex;">
                                     <input type="password" id="userPasswordInput" class="form-control w-100"
-                                        aria-label="Text input with checkbox" placeholder="Contraseña">
+                                        aria-label="Text input with checkbox" placeholder="Contraseña" minlength="5" maxlength="20">
                                 </div>
                             </div>
                         </div>
