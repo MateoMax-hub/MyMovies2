@@ -41,8 +41,8 @@ if (JSON.parse(localStorage.getItem('sesion')) == 'falseSession') {
 
 loginForm.onsubmit = (e) =>{
     e.preventDefault();
-    if (!userLogin.value) 
-    return alert('Ingrese usuario!')
+    if (!userLogin.value){
+    document.getElementById("AlertDates").style.display = "block";}
 
     const usersRegister= JSON.parse(localStorage.getItem('usersRegister')) || [];
     const usuarioLG= userLogin.value;
@@ -57,6 +57,6 @@ loginForm.onsubmit = (e) =>{
         const sessionJSON = JSON.stringify(ingresoObligatorio)
         localStorage.setItem('sesion',sessionJSON)
     } else {
-        alert('No pa no ingresaste intentalo otro dia')
+        document.getElementById("AlertDates").style.display = "block";
     }
 }

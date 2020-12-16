@@ -94,7 +94,11 @@ html, body {
 }
 .MostrarPeli{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+}
+#resetDate{
+    display: none;
 }
 @media screen and (max-width: 750px){
     .bd-placeholder-img-lg {

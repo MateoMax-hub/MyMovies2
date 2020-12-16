@@ -36,7 +36,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
+#AlertDate{
+    display: none;
+}
+#AlertDates{
+    display: none;
+}
 @media screen and (max-width: 750px){
     body{
         margin: 0%;

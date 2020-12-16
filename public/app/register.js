@@ -31,6 +31,7 @@ formUser.onsubmit= (e) =>{
 
     const usersJsonS= JSON.stringify(usersRegister);
     localStorage.setItem('usersRegister', usersJsonS);
+    window.location.href= ('./login.html')
     console.log(usersRegister)
     formUser.reset();
 }
