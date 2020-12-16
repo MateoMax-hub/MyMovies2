@@ -280,7 +280,7 @@ function displayUser(u) {
                     <div class="CardsIndividuales">
                         <a type="button" data-toggle="modal" data-target="#${agregar.id}">
                             <img src="${agregar.imagen}"
-                            class="card-img-top" alt="...">
+                        class="card-img-top" alt="...">
                         </a>
                     </div>
     
