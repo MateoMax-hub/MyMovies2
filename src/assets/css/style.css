@@ -92,7 +92,10 @@ html, body {
     display: flex;
     justify-content: center;
 }
-
+.MostrarPeli{
+    display: flex;
+    flex-wrap: wrap;
+}
 @media screen and (max-width: 750px){
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
@@ -118,8 +121,8 @@ html, body {
         margin: 6% 0px;
     }
     .CardsIndividuales{
-        margin: 0%;
-        width: 125px;
+        padding: 1%;
+        width: 100px;
     }
     .modal-dialog{
         padding: 20px;
@@ -132,7 +135,7 @@ html, body {
         margin: 2% 17%;
     }
     .cardImg{
-        width: 320px;
+        width: 280px;
     }
     .titularDeFila{
         font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -143,7 +146,11 @@ html, body {
     .CardsModal{
         display: table-column;
     }
-
+    .MostrarPeli{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 
