@@ -46,7 +46,7 @@ function getMovies() {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a type="button" class="btn btn-outline-success" href='../video.html#${movie.id}'">Ver película</a>
+                            <a type="button" class="btn btn-outline-success" href='./video.html#${movie.id}'">Ver película</a>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
