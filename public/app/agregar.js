@@ -53,6 +53,7 @@ function displayUser(u) {
                             <div class="CardsModal modal-body">
                                 <div>
                                     <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
+                                    <button class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -136,6 +137,7 @@ function displayUser(u) {
                             <div class="CardsModal modal-body">
                                 <div>
                                     <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
+                                    <button class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
 
                                 </div>
                             </div>
@@ -219,6 +221,7 @@ function displayUser(u) {
                             <div class="CardsModal modal-body">
                                 <div>
                                     <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
+                                    <button class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
 
                                 </div>
                             </div>
@@ -304,6 +307,7 @@ function displayUser(u) {
                             <div class="CardsModal modal-body">
                                 <div>
                                     <button class="btn btn-outline-success" onclick="addToCart('${agregar.id}')"><b>$${agregar.precio} Arg</b></button>
+                                    <button class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
 
                                 </div>
                             </div>

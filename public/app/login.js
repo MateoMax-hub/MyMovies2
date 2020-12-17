@@ -51,7 +51,9 @@ loginForm.onsubmit = (e) => {
     if (!passwordLogin.value) {
         document.getElementById('required1').style.display = "block";
     }
-
+    if (!userLogin.value || !passwordLogin.value) {
+        return
+    }
     const usersRegister = JSON.parse(localStorage.getItem('usersRegister')) || [];
     const usuarioLG = userLogin.value;
     const passwordLG = passwordLogin.value;
@@ -63,6 +65,8 @@ loginForm.onsubmit = (e) => {
         const sessionJSON = JSON.stringify(ingresoObligatorio)
         localStorage.setItem('sesion', sessionJSON)
     } else {
-        // document.getElementById("AlertDates").style.display = "block";
+        document.getElementById('required1').style.display = "none";
+        document.getElementById('required').style.display = "none";
+        document.getElementById('required6').style.display = 'block'
     }
 }
