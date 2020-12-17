@@ -4,6 +4,7 @@ const search = document.getElementById('searchOne');
 const SearchForm = document.getElementById('SearchForm');
 const Mostrar = document.getElementById('MostrarPelis');
 const MostrarPelisSect = document.getElementById('MostrarPelisSect')
+const resetDate = document.getElementById('resetDate')
 // Buscador o Search
 
 SearchForm.onsubmit = (e) => {
@@ -70,4 +71,5 @@ function resetSearch() {
     AllPelis.classList = 'd-block'
     MostrarPelisSect.classList = 'd-none';
     SearchForm.reset()
+    resetDate.classList = 'd-none'
 }

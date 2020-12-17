@@ -1,3 +1,3 @@
 function RecetBuscar() {
-    document.getElementById('resetDate').style.display = "block";
+    resetDate.classList = "btn btn-outline-primary ml-1 d-block";
 }
