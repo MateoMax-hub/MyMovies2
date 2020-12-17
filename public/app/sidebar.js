@@ -54,6 +54,7 @@ function showListaPeliculasSect(hideOrShow) {
         showListaUsersSect(false)
         showListaProductsSect(false)
         searchPeliculas.value = ''
+        displayAllMoviesTable()
     } else {
         listaPeliculasSect.classList = 'd-none'
     }
@@ -69,6 +70,7 @@ function showListaUsersSect(hideOrShow) {
         showAgregarPeliculaSect(false)
         showListaProductsSect(false)
         searchUser.value = ''
+        displayAllUsersTable()
     } else {
         listaUsersSect.classList = 'd-none'
     }
@@ -84,6 +86,7 @@ function showListaProductsSect(hideOrShow) {
         showAgregarPeliculaSect(false)
         showListaUsersSect(false)
         searchProduct.value = ''
+        filtrarPeliculas()
     } else {
         listaProductsSect.classList = 'd-none'
     }
