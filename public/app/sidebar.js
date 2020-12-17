@@ -1,3 +1,7 @@
+const searchPeliculas = document.getElementById('searchPeliculas')
+const searchUser = document.getElementById('searchUser')
+const searchProduct = document.getElementById('searchProduct')
+
 function sidebarHeight () {
 
     $(document).ready(function () {
@@ -49,7 +53,8 @@ function showListaPeliculasSect(hideOrShow) {
         showAgregarPeliculaSect(false)
         showListaUsersSect(false)
         showListaProductsSect(false)
-
+        searchPeliculas.value = ''
+        displayAllMoviesTable()
     } else {
         listaPeliculasSect.classList = 'd-none'
     }
@@ -64,6 +69,8 @@ function showListaUsersSect(hideOrShow) {
         showListaPeliculasSect(false)
         showAgregarPeliculaSect(false)
         showListaProductsSect(false)
+        searchUser.value = ''
+        displayAllUsersTable()
     } else {
         listaUsersSect.classList = 'd-none'
     }
@@ -78,6 +85,8 @@ function showListaProductsSect(hideOrShow) {
         showListaPeliculasSect(false)
         showAgregarPeliculaSect(false)
         showListaUsersSect(false)
+        searchProduct.value = ''
+        filtrarPeliculas()
     } else {
         listaProductsSect.classList = 'd-none'
     }
