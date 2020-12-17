@@ -1,8 +1,15 @@
 const videoJJ = document.getElementById('videoPeliPush');
 
 function displayUsers() {
+    const idMovie = window.location.hash
+    const idMovieSub = idMovie.substr(1)
+
+
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
-    const userMovies = userUI.filter((i) => i.id == userUI[2].id)
+    const userMovies = userUI.filter((i) => i.id == idMovieSub)
+    console.log("🚀 ~ file: videos.js ~ line 10 ~ displayUsers ~ userMovies", userMovies)
+
+    
     const linkUser = userMovies[0].video;
     console.log(linkUser)
 
