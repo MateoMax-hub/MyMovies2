@@ -19,15 +19,15 @@ function editUser(id) {
     const suspended = editingUser[0].estado
 
     if (suspended == 'suspendido') {
-        suspendedEditInput.setAttribute ('checked','')
+        suspendedEditInput.checked = true
     } else {
-        suspendedEditInput.removeAttribute('checked')
+        suspendedEditInput.checked = false
     }
 
     if (admin) {
-        adminEditInput.setAttribute ('checked','')
+        adminEditInput.checked = true
     } else {
-        adminEditInput.removeAttribute('checked')
+        adminEditInput.checked = false
     }
     nombreEditInput.value = nombre
     emailEditInput.value = email
@@ -92,16 +92,15 @@ function redoUserEdit(i) {
         contraseñaEditInput.value = contraseña
     }if (i == "admin") {
         if (admin) {
-            adminEditInput.setAttribute ('checked','')
+            adminEditInput.checked = true
         } else {
-            adminEditInput.removeAttribute('checked')
+            adminEditInput.checked = false
         }
     } if (i == "suspended") {
-        if (estado == 'suspendido') {
-            suspendedEditInput.setAttribute ('checked','')
+        if (suspendedEditInput.checked) {
+            estado = 'suspendido'
         } else {
-            suspendedEditInput.removeAttribute('checked')
-
+            estado = 'habilitada'
         }
     }
 }
