@@ -1,0 +1,15 @@
+iframe{
+    width: 780px;
+    height: 415px;
+}
+.videoPeli{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 750px){
+    iframe{
+        width: 350px;
+        height: 230px;
+    }
+}

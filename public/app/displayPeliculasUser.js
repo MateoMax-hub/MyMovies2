@@ -7,6 +7,7 @@ var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
 function getMovies() {
     const sesion = userSesion()
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
+    // console.log(userUI[1].id)
     const tr = []
     const modals = []
     for (let i = 0; i < sesion.enAlquiler.length; i++) {
@@ -38,8 +39,6 @@ function getMovies() {
                             </button>
                         </div>
                         <div class="modal-body">
-                            
-                            
                             <b>Categorias:</b>${movie.categoria}
                             <br>
                             <div>
@@ -47,7 +46,7 @@ function getMovies() {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-success" onclick="window.location = 'https://www.netflix.com/browse'">Ver película</button>
+                            <a type="button" class="btn btn-outline-success" href='../video.html#${movie.id}'">Ver película</a>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -56,8 +55,6 @@ function getMovies() {
         `
         tr.push(td)
         modals.push(modal)
-    
-        
     }
     listaTBody.innerHTML = tr.join('')
     modalsSect.innerHTML = modals.join('')

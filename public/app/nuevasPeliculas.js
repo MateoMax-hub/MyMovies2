@@ -4,6 +4,7 @@ const Titulo = document.getElementById('TituloPeli');
 const Descripcion = document.getElementById('DescripcionPeli');
 const Precio = document.getElementById('PrecioPeli');
 const Imagen = document.getElementById('ImagenPeli');
+const Video = document.getElementById('linkVideo');
 const Categoria = document.getElementById('categoriaPeli');
 
 const generateId = function () {
@@ -19,6 +20,7 @@ formularioAgregar.onsubmit = (e) => {
     const descripcion = Descripcion.value;
     const precio = Precio.value;
     const imagen = Imagen.value;
+    const video = Video.value;
     const categoria = Categoria.value;
 
     userUI.push({
@@ -26,6 +28,7 @@ formularioAgregar.onsubmit = (e) => {
         descripcion: descripcion,
         precio: precio,
         imagen: imagen,
+        video: video,
         categoria: categoria,
         id: generateId()
     })
