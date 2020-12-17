@@ -23,7 +23,7 @@ function endBuy() {
             const ee = ids[i];
             const findM = ids.find((e) => element.id == e.id)
             if (findM) {
-                alert('ya posees una o mas peliculas en tu carrito, por favor verificarlo en tu lista de peliculas')
+                $("#modalDeAviso2").modal('show')
                 return
             }
         }

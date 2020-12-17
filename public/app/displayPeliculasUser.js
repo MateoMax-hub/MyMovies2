@@ -28,21 +28,21 @@ function getMovies() {
         `
         
         const modal = `
-            <!-- Modal -->
-            <div class="modal fade" id="modalOf${movie.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">${movie.titulo}</h5>
-                            <button type="button" class="btn-close btn" data-dismiss="modal" aria-label="Close">
-                                <b><span aria-hidden="true">&times;</span></b>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <b>Categorias:</b>${movie.categoria}
-                            <br>
-                            <div>
-                                <b>Descripción:</b>${movie.descripcion}
+            
+
+            <div class="modal fade" id="modalOf${movie.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class=" modal-dialog">
+                    <div class="fondoDeCard modal-content">
+                        <div class="ofCard">
+                            <div class="CardsModal card-body">
+                                <div>
+                                    <h5 class="card-title">${movie.titulo}</h5>
+                                    <img src="${movie.imagen}"class="cardImg" alt="...">
+                                </div>
+                                <div class="CardsM">
+                                    <p class="card-text"><b>Descripcion: </b>${movie.descripcion}</p>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">

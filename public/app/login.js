@@ -39,7 +39,7 @@ if (userRegisterFind == undefined) {
 
 if (JSON.parse(localStorage.getItem('sesion')) == 'falseSession') {
 } else {
-    window.location.href = ('./index.html')
+    window.location.href = ('./public/landPage.html')
 }
 
 loginForm.onsubmit = (e) => {
@@ -59,7 +59,7 @@ loginForm.onsubmit = (e) => {
     const ingresoObligatorio = usersRegister.find((usersRegister) => usersRegister.usuario === usuarioLG && usersRegister.password === passwordLG);
 
     if (ingresoObligatorio) {
-        window.location.href = ('../index.html')
+        window.location.href = ('./public/landPage.html')
         const sessionJSON = JSON.stringify(ingresoObligatorio)
         localStorage.setItem('sesion', sessionJSON)
     } else {

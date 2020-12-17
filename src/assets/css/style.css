@@ -203,3 +203,6 @@ html, body {
 .input-sm {
     width: 100px;
 }
+.my-over {
+    overflow-x: auto;
+}
