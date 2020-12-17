@@ -13,6 +13,16 @@ const generateId = function () {
 
 formUser.onsubmit= (e) =>{
     e.preventDefault();
+    if (!usuarioLG.value) {
+        document.getElementById('required2').style.display = "block";
+    }
+    if (!emailRegisterInput.value) {
+        document.getElementById('required3').style.display = "block";
+    }
+    if (!passwordLG.value) {
+        document.getElementById('required4').style.display = "block";
+    }
+
     const usersRegister= JSON.parse(localStorage.getItem('usersRegister')) || [];
     const usuario= usuarioLG.value;
     const email= emailLG.value;
@@ -31,7 +41,7 @@ formUser.onsubmit= (e) =>{
 
     const usersJsonS= JSON.stringify(usersRegister);
     localStorage.setItem('usersRegister', usersJsonS);
-    window.location.href= ('./login.html')
+    // window.location.href= ('./login.html')
     console.log(usersRegister)
     formUser.reset();
 }

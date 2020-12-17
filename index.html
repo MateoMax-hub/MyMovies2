@@ -37,9 +37,11 @@
                     <a href="./public/userMoviesList.html">Mi lista</a>
                 </div>
                 <button class="btn btn-outline-danger my-font mr-4" data-toggle="modal" data-target="#modalCarrito">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
+                        class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                    </svg>
                 </button>
                 <a type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal7">
                     <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
@@ -196,28 +198,28 @@
             <div style="display: flex;">
                 <form id="SearchForm">
                     <div id="search">
-                        <button type="button" onclick="resetSearch()" class="btn btn-outline-danger redo-icon ml-3">
-                            <i class="fas fa-redo-alt"></i>
-                        </button>
                         <div style="margin: 0% 5%;">
-                            
+
                             <input class="form-control" type="search" id="searchOne" placeholder="Buscador"
                                 aria-label="Search">
                         </div>
-                        <div>
+                        <div style="display: flex;">
                             <button id="buscador" class="btn btn-outline-danger" onclick="RecetBuscar()">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
                                     <path fill-rule="evenodd"
                                         d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
                                 </svg>
                             </button>
-                            <a id="resetDate" class="btn btn-outline-primary" href="./index.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-                                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                            <a id="resetDate" class="btn btn-outline-primary ml-1" onclick="resetSearch()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                    <path
+                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
                                 </svg>
                             </a>
                         </div>
@@ -233,7 +235,7 @@
     </section>
 
     <!-- Subir pelicula nueva -->
-    
+
     <section id="AllPelis">
         <div>
             <h4 class="titularDeFila">Nuevos Agregados</h4>
@@ -397,7 +399,8 @@
         </div>
     </section>
     <section id="ifSuspendedModal">
-        <div class="modal fade" id="suspendedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal fade" id="suspendedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+            data-backdrop="static">
             <div class="modal-dialog">
                 <div class="bordes modal-content">
                     <div class="Datos modal-body">
@@ -406,14 +409,16 @@
                     <hr class="hr-my pb-1">
                     <div class=" overflow-auto">
                         <h6 class="mx-4">Su cuenta ha sido suspendida debido a que su banco,
-                            deshizo algun pago reciente, realizado con su tarjeta de credito o debito, esto puede suceder 
+                            deshizo algun pago reciente, realizado con su tarjeta de credito o debito, esto puede
+                            suceder
                             si, el titular denuncia como desconocido el pago en su resumen. Si esto
-                            es un error por favor contacte con su banco y luego con nuestro soporte para 
+                            es un error por favor contacte con su banco y luego con nuestro soporte para
                             acordar una solución.</h6>
                     </div>
                     <hr class="hr-my pb-1">
                     <div class="modal-body mt-1 d-flex flex-row-reverse">
-                        <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-danger"><b>Cerrar Sesion</b></button>
+                        <button type="button" onclick="endSession()" id="dropdown01" class="btn btn-danger"><b>Cerrar
+                                Sesion</b></button>
                     </div>
                 </div>
             </div>
