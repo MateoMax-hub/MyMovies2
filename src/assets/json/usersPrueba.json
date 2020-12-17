@@ -2,64 +2,81 @@
     {
         "admin": true,
         "email": "hi@hi",
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
         "id": "_111111111",
         "password": "123admin",
         "usuario": "pelisAdmin"
     },
     {
         "admin": false,
-        "email": "max.mateo.02@gmail.com",
-        "id": "_r2y5j7j8e",
-        "password": "123",
-        "usuario": "max"
+        "email": "hi@hi",
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
+        "id": "_kgrwwbvjt",
+        "password": "123admin",
+        "usuario": "Guillem Mata"
     },
     {
         "admin": false,
         "email": "hi@hi",
-        "id": "_1cadmlfwd",
-        "password": "123",
-        "usuario": "hi"                                                            
-    },
-    {
-        "admin": true,
-        "email": "aaaa@aa",
-        "id": "_wa3dyaqyv",
-        "password": "555555",
-        "usuario": "adminn" 
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
+        "id": "_183y5qttm",
+        "password": "123admin",
+        "usuario": "Aicha Blazquez"                                                          
     },
     {
         "admin": false,
-        "email": "aa@aa",
-        "id": "_srul467g6",
-        "password": "525252",
-        "usuario": "awddwdw" 
+        "email": "hi@hi",
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
+        "id": "_d6020jmfj",
+        "password": "123admin",
+        "usuario": "Jacinto Castellanos"                                                          
     },
     {
         "admin": false,
-        "email": "lopez@aa",
-        "id": "_fmt34kxeq",
-        "password": "hiworld",
-        "usuario": "lopez" 
+        "email": "hi@hi",
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
+        "id": "_6lxfa7j3k",
+        "password": "123admin",
+        "usuario": "Paredes"                                                          
     },
     {
         "admin": false,
-        "email": "juarez@aa",
-        "id": "_jbb3sa817",
-        "password": "pagateTuCuenta",
-        "usuario": "juarez" 
+        "email": "hi@hi",
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
+        "id": "_5fbpza36s",
+        "password": "123admin",
+        "usuario": "Anton"                                                          
     },
     {
         "admin": false,
-        "email": "jj@aa",
-        "id": "_ee11imzwp",
-        "password": "iDidIt",
-        "usuario": "jj" 
+        "email": "hi@hi",
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
+        "id": "_rz75eu8xm",
+        "password": "123admin",
+        "usuario": "Manrique"                                                          
     },
     {
         "admin": false,
-        "email": "rick@aa",
-        "id": "_ic5knhozg",
-        "password": "iDidItToo",
-        "usuario": "rick" 
+        "email": "hi@hi",
+        "enAlquiler": [],
+        "enCarrito": [],
+        "estado": "habilitada",
+        "id": "_jq39fzkht",
+        "password": "123admin",
+        "usuario": "Jaume"                                                          
     }
 ]
