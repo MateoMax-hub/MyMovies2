@@ -44,7 +44,8 @@ function addToCart(id) {
     
     const noRepetidoCart = user.enCarrito.find((i) => i.id == id)
     if (noRepetidoCart) {
-        alert('la pelicula ya se encuentra en el carrito')
+        // alert('la pelicula ya se encuentra en el carrito')
+        $('#modalDeAviso').modal('show')
     } else {
         const pid = {
             id: id,
