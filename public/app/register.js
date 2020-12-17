@@ -28,16 +28,32 @@ formUser.onsubmit= (e) =>{
     const email= emailLG.value;
     const password= passwordLG.value;
 
+
+    const validacion = usersRegister.find((u) => u.email.toLowerCase() == email.toLowerCase())
+
+
+
+    let id = generateId()
+    while ((validacionId = usersRegister.find((u) => u.id == id)) !== undefined) {
+        id = generateId()
+    }
+
+
+    if (validacion !== undefined){
+        alert('email en uso')
+        return
+    }
     usersRegister.push({
         usuario: usuario,
         email: email,
         password: password,
-        id: generateId(),
+        id: id,
         admin: false,
         enCarrito: [],
         enAlquiler: [],
         estado: 'habilitada'
     })
+
 
     const usersJsonS= JSON.stringify(usersRegister);
     localStorage.setItem('usersRegister', usersJsonS);

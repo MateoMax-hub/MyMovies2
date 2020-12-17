@@ -7,7 +7,12 @@ const newUserForm = document.getElementById('newUserForm')
 
 
 function randomId() {
-    const id = generateId()
+    const usersRegister= JSON.parse(localStorage.getItem('usersRegister')) || [];
+    let id = generateId()
+    while ((validacionId = usersRegister.find((u) => u.id == id)) !== undefined) {
+        id = generateId()
+    }
+    
     userIdInput.value = id
 }
 
@@ -23,6 +28,21 @@ newUserForm.onsubmit= (e) =>{
         admin = true
     } else {
         admin = false
+    }
+
+    const validacion = usersRegister.find((u) => u.email.toLowerCase() == email.toLowerCase())
+    const validacion2 = usersRegister.find((u) => u.id == id)
+    if (validacion !== undefined && validacion2 !== undefined) {
+        alert('email e id en uso')
+        return
+    }
+    if (validacion !== undefined){
+        alert('email en uso')
+        return
+    }
+    if (validacion2 !== undefined){
+        alert('id en uso')
+        return
     }
 
     usersRegister.push({
