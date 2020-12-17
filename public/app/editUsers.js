@@ -81,6 +81,7 @@ function redoUserEdit(i) {
     const email = editingUser[0].email
     const contraseña = editingUser[0].password
     const admin = editingUser[0].admin
+    const suspended = editingUser[0].estado
 
     
 
@@ -97,10 +98,10 @@ function redoUserEdit(i) {
             adminEditInput.checked = false
         }
     } if (i == "suspended") {
-        if (suspendedEditInput.checked) {
-            estado = 'suspendido'
+        if (suspended == 'suspendido') {
+            suspendedEditInput.checked = true
         } else {
-            estado = 'habilitada'
+            suspendedEditInput.checked = false
         }
     }
 }

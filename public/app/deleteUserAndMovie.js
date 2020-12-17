@@ -4,6 +4,8 @@ function deleteUser(id) {
     const deletingUserJSON = JSON.stringify(deletingUser)
     localStorage.setItem('usersRegister',deletingUserJSON)
     displayAllUsersTable()
+    searchUser.value = ''
+
 }
 function deleteMovie(id) {
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
@@ -11,11 +13,7 @@ function deleteMovie(id) {
     const users = JSON.parse(localStorage.getItem('usersRegister')) || [];
     
     const movies = []
-    const validacion = movies.find((u) => u.idMovie == id)
-    if (validacion !== undefined) {
-        alert(`el usuario ${userName} tiene comprada la pelicula que estas queriendo eliminar, eliminacela primero para poder eliminarla por completo de Mercado Pelis`)
-        return
-    }
+    
     for (let i = 0; i < users.length; i++) {
         const user = users[i];
         const userId = user.id
@@ -35,11 +33,30 @@ function deleteMovie(id) {
             movies.push(movie)
         }
     }
+    const validacion = movies.find((u) => u.idMovie == id)
+    if (validacion !== undefined) {
+        console.log("hola");
+        alert(`un usuario tiene comprada la pelicula que estas queriendo eliminar, eliminacela primero para poder eliminarla por completo de Mercado Pelis`)
+        return
+    }
+    
+    for (let i = 0; i < users.length; i++) {
+        const user = users[i];
+
+        const validacion2 = user.enCarrito.find((a) => a.id == id)
+        if (validacion2 !== undefined) {
+            alert('un usuario tiene la pelicula en su carrito no puedes eliminar la pelicula')
+            return
+        }
+        
+    }
+
     const deletingMovie = userUI.filter((u) => u.id !== id)
 
     const deletingMovieJSON = JSON.stringify(deletingMovie)
     localStorage.setItem('userUI',deletingMovieJSON)
     displayAllMoviesTable()
+    searchPeliculas.value = ''
 }
 
 function deleteInCarrito(id) {

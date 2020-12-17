@@ -13,4 +13,6 @@ function deleteProduct(m,u) {
     const newUsersJSON = JSON.stringify(newUsers)
     localStorage.setItem('usersRegister',newUsersJSON)
     filtrarPeliculas()
+    searchProduct.value = ''
+
 }

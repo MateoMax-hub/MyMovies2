@@ -17,11 +17,12 @@ searchProduct.oninput = () => {
     filter(term,where)
 }
 
-function filtrarPeliculas(term) {
+function filtrarPeliculas2(term) {
     const users = JSON.parse(localStorage.getItem('usersRegister')) || [];
     const userUI = JSON.parse(localStorage.getItem('userUI')) || [];
 
     const movies = []
+    console.log(movies);
     for (let i = 0; i < users.length; i++) {
         const user = users[i];
         const userId = user.id
@@ -41,9 +42,9 @@ function filtrarPeliculas(term) {
             movies.push(movie)
         }
     }
-
-    const productFiltradas = movies.filter(p => (
-        p.userName.toLowerCase().includes(term.toLowerCase())
+    console.log(movies[1].userName);
+    const productFiltradas = movies.filter((p) => (
+        "adminPelis".includes(term.toLowerCase())
         || p.idMovie.toLowerCase().includes(term.toLowerCase())
         || p.userId.toLowerCase().includes(term.toLowerCase())
         || p.title.toLowerCase().includes(term.toLowerCase())
@@ -72,6 +73,6 @@ function filter (term,where) {
         displayUsersTable(usersFiltradas)
     }
     if (where == "product") {
-        filtrarPeliculas(term)
+        filtrarPeliculas2(term)
     }
 }

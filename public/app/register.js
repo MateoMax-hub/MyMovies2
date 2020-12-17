@@ -22,6 +22,9 @@ formUser.onsubmit= (e) =>{
     if (!passwordLG.value) {
         document.getElementById('required4').style.display = "block";
     }
+    if (!usuarioLG.value || !emailRegisterInput.value || !passwordLG.value) {
+        return
+    }
 
     const usersRegister= JSON.parse(localStorage.getItem('usersRegister')) || [];
     const usuario= usuarioLG.value;
@@ -40,7 +43,7 @@ formUser.onsubmit= (e) =>{
 
 
     if (validacion !== undefined){
-        alert('email en uso')
+        document.getElementById('required5').style.display = 'block'
         return
     }
     usersRegister.push({

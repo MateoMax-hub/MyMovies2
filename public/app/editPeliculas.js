@@ -4,6 +4,7 @@ const imageEditInput = document.getElementById('imageEditInput')
 const categorieEditInput = document.getElementById('categorieEditInput')
 const descriptionEditInput = document.getElementById('descriptionEditInput')
 const editMovieForm = document.getElementById('editMovieForm')
+const videoEditInput = document.getElementById('videoEditInput')
 let idEditing = ''
 
 
@@ -21,13 +22,14 @@ function editMovie(id) {
     const img = editingMovie[0].imagen
     const categorie = editingMovie[0].categoria
     const description = editingMovie[0].descripcion
+    const video = editingMovie[0].video
 
     titleEditInput.value = title
     priceEditInput.value = price
     imageEditInput.value = img
     categorieEditInput.value = categorie 
     descriptionEditInput.value = description
-
+    videoEditInput.value = video
 }   
 
 editMovieForm.onsubmit = (e) => {
@@ -39,6 +41,7 @@ editMovieForm.onsubmit = (e) => {
     imagen = imageEditInput.value
     categoria = categorieEditInput.value
     descripcion = descriptionEditInput.value
+    video = videoEditInput.value
     const editingMovie = userUI.map((m) => {
         if (m.id == idEditing) {
             const movie = {
@@ -47,7 +50,8 @@ editMovieForm.onsubmit = (e) => {
                 precio,
                 imagen,
                 categoria,
-                descripcion
+                descripcion,
+                video
             }
             return movie
         } else {
@@ -70,7 +74,10 @@ function redoEdit(t) {
     const img = editingMovie[0].imagen
     const categorie = editingMovie[0].categoria
     const description = editingMovie[0].descripcion
-
+    const video = editingMovie[0].video
+    if (t == 'video') {
+        videoEditInput.value = video
+    }
     if (t == 'title') {
         titleEditInput.value = title
     }if (t == 'price') {
