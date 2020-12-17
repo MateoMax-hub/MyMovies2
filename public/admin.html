@@ -262,7 +262,7 @@
                             <th scope="col">Titulo</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Categoria</th>
-                            <th scope="col"></th>
+                            <th scope="col"><input type="text" placeholder="Buscar" id="searchPeliculas"></th>
                         </tr>
                     </thead>
                     <tbody id="moviesTBody">
@@ -279,7 +279,7 @@
                             <th scope="col">Nombre</th>
                             <th class="ElementsDeUsuarios" scope="col">Email</th>
                             <th scope="col">Estado</th>
-                            <th scope="col"></th>
+                            <th scope="col"><input type="text" placeholder="Buscar" id="searchUser"></th>
                         </tr>
                     </thead>
                     <tbody id="usersTBody">
@@ -287,7 +287,7 @@
                 </table>
             </div>
         </div>
-        <div id="listaProductsSect" class="w-100 h-100 overflow-auto">
+        <div id="listaProductsSect" class="w-100 h-100 overflow-auto d-none">
             <h2 class="my-5 text-center text-white">Lista películas alquiladas</h2>
             <div>
                 <table class="table table-striped text-white">
@@ -297,7 +297,7 @@
                             <th scope="col">Nombre de pelicula</th>
                             <th scope="col">Propietario</th>
                             <th scope="col">Fecha de expiracion</th>
-                            <th scope="col"></th>
+                            <th scope="col"><input type="text" placeholder="Buscar" id="searchProduct"></th>
                         </tr>
                     </thead>
                     <tbody id="productsTBody">
@@ -512,7 +512,7 @@
     <script src="./app/displayProductsAdmin.js"></script>
     <script src="./app/deleteRentedProduct.js"></script>
     <script src="./app/datos.js"></script>
-
+    <script src="./app/searchAdmin.js"></script>
 </body>
 
 </html>
